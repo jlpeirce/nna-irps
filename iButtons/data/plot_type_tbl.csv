@@ -1,0 +1,121 @@
+iBtn_ID,Plot_ID,Plot_type,Sensor_type
+X1,21A-01,Aquatic forb,Water surface
+X2,21A-01,Aquatic forb,Above moss
+X4,21A-01,Aquatic forb,Sediment
+X5,21A-02,Thick moss,Water surface
+X6,21A-02,Thick moss,Above moss
+X9,21A-02,Thick moss,Sediment
+X10,21A-03,Aquatic forb,Sediment
+X14,21A-03,Aquatic forb,Above moss
+X19,21A-03,Aquatic forb,Water surface
+X20,21A-04,Shallow moss,Water surface
+X21,21A-05,Thick moss,Above moss
+X22,21A-04,Shallow moss,Sediment
+X23,21A-05,Thick moss,Water surface
+X24,21A-04,Shallow moss,Above moss
+X25,21A-05,Thick moss,Sediment
+X27,21A-06,Thick moss,Water surface
+X28,21A-06,Thick moss,Above moss
+X29,21A-06,Thick moss,Sediment
+X30,21A-07,Bare,Water surface
+X32,21A-07,Bare,Above moss
+X34,21A-07,Bare,Sediment
+X35,21A-08,Shallow moss,Water surface
+X37,21A-08,Shallow moss,Above moss
+X38,21A-08,Shallow moss,Sediment
+X39,21A-10,Thick moss,Water surface
+X41,21A-10,Thick moss,Above moss
+X42,21A-10,Thick moss,Sediment
+X46,21A-09,Shallow moss,Water surface
+X47,21A-09,Shallow moss,Above moss
+X48,21A-09,Shallow moss,Sediment
+X50,21A-11,Shallow moss,Water surface
+X52,21A-11,Shallow moss,Above moss
+X53,21A-11,Shallow moss,Sediment
+X57,21A-12,Bare,Water surface
+X58,21A-12,Bare,Above moss
+X59,21A-12,Bare,Sediment
+X60,21A-13,Aquatic forb,Water surface
+X64,21A-13,Aquatic forb,Above moss
+X65,21A-13,Aquatic forb,Sediment
+X66,21A-14,Bare,Water surface
+X67,21A-14,Bare,Above moss
+X69,21A-14,Bare,Sediment
+X70,21A-15,Thick moss,Water surface
+X72,21A-15,Thick moss,Above moss
+X74,21A-15,Thick moss,Sediment
+X75,21A-16,Bare,Water surface
+X76,21A-16,Bare,Above moss
+X77,21A-16,Bare,Sediment
+X79,21A-17,Aquatic forb,Water surface
+X80,21A-17,Aquatic forb,Above moss
+X82,21A-17,Aquatic forb,Sediment
+X83,21A-18,Thick moss,Water surface
+X85,21A-18,Thick moss,Above moss
+X86,21A-18,Thick moss,Sediment
+X90,21A-19,Bare,Water surface
+X91,21A-19,Bare,Above moss
+X95,21A-19,Bare,Sediment
+X96,21A-20,Lake,Water surface
+X101,21A-20,Lake,Sediment
+X103,21A-21,Thick moss,Water surface
+X105,21A-21,Thick moss,Above moss
+X108,21A-21,Thick moss,Sediment
+X110,21A-22,Aquatic forb,Water surface
+X111,21A-22,Aquatic forb,Above moss
+X112,21A-22,Aquatic forb,Sediment
+X117,21A-23,Shallow moss,Water surface
+X119,21A-23,Shallow moss,Above moss
+X120,21A-23,Shallow moss,Sediment
+X122,21A-24,Bare,Water surface
+X125,21A-24,Bare,Above moss
+X126,21A-24,Bare,Sediment
+X127,21A-25,Aquatic forb,Water surface
+X129,21A-25,Aquatic forb,Above moss
+X130,21A-25,Aquatic forb,Sediment
+X134,21A-26,Thick moss,Water surface
+X135,21A-26,Thick moss,Above moss
+X136,21A-26,Thick moss,Sediment
+X138,21A-27,Bare,Water surface
+X141,21A-27,Bare,Above moss
+X142,21A-27,Bare,Sediment
+X144,21A-28,Aquatic forb,Water surface
+X145,21A-28,Aquatic forb,Above moss
+X146,21A-28,Aquatic forb,Sediment
+X147,21A-29,Shallow moss,Water surface
+X149,21A-29,Shallow moss,Above moss
+X152,21A-29,Shallow moss,Sediment
+X153,21A-30,Bare,Water surface
+X155,21A-30,Bare,Above moss
+X157,21A-30,Bare,Sediment
+X158,21A-31,Aquatic forb,Water surface
+X160,21A-31,Aquatic forb,Above moss
+X161,21A-31,Aquatic forb,Sediment
+X163,21A-32,Thick moss,Water surface
+X165,21A-32,Thick moss,Above moss
+X166,21A-32,Thick moss,Sediment
+X167,21A-33,Shallow moss,Water surface
+X168,21A-33,Shallow moss,Above moss
+X169,21A-33,Shallow moss,Sediment
+X170,21A-34,Thick moss,Water surface
+X172,21A-34,Thick moss,Above moss
+X173,21A-34,Thick moss,Sediment
+X174,21A-35,Bare,Water surface
+X175,21A-35,Bare,Above moss
+X176,21A-35,Bare,Sediment
+X177,21A-36,Thick moss,Water surface
+X180,21A-36,Thick moss,Sediment
+X181,21A-37,Shallow moss,Water surface
+X182,21A-37,Shallow moss,Above moss
+X184,21A-37,Shallow moss,Sediment
+X185,21A-38,Bare,Water surface
+X186,21A-38,Bare,Above moss
+X187,21A-38,Bare,Sediment
+X188,21A-39,Shallow moss,Water surface
+X190,21A-39,Shallow moss,Above moss
+X192,21A-39,Shallow moss,Sediment
+X194,21A-40,Aquatic forb,Water surface
+X195,21A-40,Aquatic forb,Above moss
+X196,21A-40,Aquatic forb,Sediment
+X198,JS,N/A,Air
+X199,NIRPO,N/A,Air

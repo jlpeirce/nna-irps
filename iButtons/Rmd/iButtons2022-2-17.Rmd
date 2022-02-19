@@ -1,0 +1,54 @@
+---
+title: "iButtons2022"
+author: "Jana Peirce, Emily Watson-Cook"
+date: "2/16/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r message = FALSE}
+library(dplyr)
+library(tidyr)
+library(readr)
+library(ggplot2)
+library(scales)
+```
+
+```{r}
+ibtn_temp <- read.csv("../data/ibtn_temp_tbl.csv")
+
+head(ibtn_temp)
+```
+
+```{r}
+temp_long <- ibtn_temp %>% 
+  pivot_longer(cols = c(-Date, -Time), names_to = "iBtn_ID", values_to = "temp_c") 
+
+head(temp_long)
+```
+
+
+```{r}
+plot_type <- read.csv("../data/plot_type_tbl.csv")
+
+head(plot_type)
+```
+
+```{r}
+iBtn_summary <- left_join(temp_long, plot_type, by = c("iBtn_ID")) 
+
+head(iBtn_summary)
+```
+
+
+```{r}
+avg_daily_temp <- iBtn_summary %>%
+  group_by(Date, iBtn_ID, Sensor_type, Plot_type) %>% 
+  summarize(avg_daily_temp = mean(temp_c, na.rm = T), .groups = "drop")
+
+avg_daily_temp
+```
+
