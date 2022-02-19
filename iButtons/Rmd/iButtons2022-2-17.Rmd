@@ -1,8 +1,11 @@
 ---
 title: "iButton Temperature Data from 40 Aquatic Plots"
-author: "Jana Peirce, Emily Watson-Cook"
+author: "Emily Watson-Cook, Jana Peirce"
 date: "July 19 - Aug 23, 2021"
-output: html_document
+output:
+  pdf_document: default
+  word_document: default
+  html_document: default
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(fig.width = 8, fig.height = 5, echo = FALSE, warning = FALSE, message = FALSE)
@@ -259,9 +262,6 @@ ggsave(here("iButtons/figures/", "adt-plot-facet.png"), plot = p.adt_plot_facet)
 
 sedi_moss_filter <- avg_daily_temp %>% 
     filter(Sensor_type == "Sediment", Plot_type == "Thick moss")
-
-sedi_moss_filter
-
 ```
 
 ```{r}
