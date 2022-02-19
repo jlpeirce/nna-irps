@@ -3,9 +3,9 @@ title: "iButton Temperature Data from 40 Aquatic Plots"
 author: "Emily Watson-Cook, Jana Peirce"
 date: "19 February 2022"
 output:
-  pdf_document: default
-  word_document: default
   html_document: default
+  word_document: default
+  pdf_document: default
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
@@ -171,6 +171,8 @@ knitr::kable(mean_sensor_plot[, 1:3], "simple", col.names = c("Sensor Type","Plo
 
 p.mean_sensor_plot <- p
 ```
+
+
 ### Let's look at the data in more detail. 
 
 Here is a plot of the average daily temperature of each iButton from July 19 to August 23.
