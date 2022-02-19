@@ -175,7 +175,8 @@ pre code {
 library(tidyr)
 library(readr)
 library(ggplot2)
-library(scales)</code></pre>
+library(scales)
+library(lubridate)</code></pre>
 <pre class="r"><code>ibtn_temp &lt;- read.csv(&quot;../data/ibtn_temp_tbl.csv&quot;)
 
 head(ibtn_temp)</code></pre>
@@ -243,7 +244,7 @@ head(ibtn_temp)</code></pre>
 ## 5 19.0 20.0
 ## 6 18.0 18.5</code></pre>
 <pre class="r"><code>temp_long &lt;- ibtn_temp %&gt;% 
-  pivot_longer(cols = c(-Date, -Time), names_to = &quot;iBtn_ID&quot;, values_to = &quot;temp_c&quot;)
+  pivot_longer(cols = c(-Date, -Time), names_to = &quot;iBtn_ID&quot;, values_to = &quot;temp_c&quot;) 
 
 head(temp_long)</code></pre>
 <pre><code>## # A tibble: 6 x 4
@@ -255,13 +256,13 @@ head(temp_long)</code></pre>
 ## 4 2021-07-19 &quot; 6:00:00 PM&quot; X5        21.5
 ## 5 2021-07-19 &quot; 6:00:00 PM&quot; X6        21.5
 ## 6 2021-07-19 &quot; 6:00:00 PM&quot; X9         8.5</code></pre>
-<div id="questions" class="section level2">
-<h2>Questions</h2>
-<ul>
-<li>why do I have to run libraries and reset variables every time I restart RStudio desktop?</li>
-<li>why do column heads that are numbers become characters (X002) when converted to a col variable in a long format?</li>
-<li>using git with desktop r studio?</li>
-</ul>
+<pre class="r"><code>class(temp_long)</code></pre>
+<pre><code>## [1] &quot;tbl_df&quot;     &quot;tbl&quot;        &quot;data.frame&quot;</code></pre>
+<pre class="r"><code>my.data &lt;- data.frame(temp_long)
+my.data$Date &lt;- as.Date(my.data$Date, format = &quot;%Y/%m/%d&quot;)
+
+class(my.data$Date)</code></pre>
+<pre><code>## [1] &quot;Date&quot;</code></pre>
 <pre class="r"><code>plot_type &lt;- read.csv(&quot;../data/plot_type_tbl.csv&quot;)
 
 head(plot_type)</code></pre>
@@ -272,7 +273,7 @@ head(plot_type)</code></pre>
 ## 4      X5  21A-02   Thick moss Water surface
 ## 5      X6  21A-02   Thick moss    Above moss
 ## 6      X9  21A-02   Thick moss      Sediment</code></pre>
-<pre class="r"><code>iBtn_summary &lt;- left_join(temp_long, plot_type, by = c(&quot;iBtn_ID&quot;))
+<pre class="r"><code>iBtn_summary &lt;- left_join(temp_long, plot_type, by = c(&quot;iBtn_ID&quot;)) 
 
 head(iBtn_summary)</code></pre>
 <pre><code>## # A tibble: 6 x 7
@@ -284,7 +285,6 @@ head(iBtn_summary)</code></pre>
 ## 4 2021-07-19 &quot; 6:00:00 PM&quot; X5        21.5 21A-02  Thick moss   Water surface
 ## 5 2021-07-19 &quot; 6:00:00 PM&quot; X6        21.5 21A-02  Thick moss   Above moss   
 ## 6 2021-07-19 &quot; 6:00:00 PM&quot; X9         8.5 21A-02  Thick moss   Sediment</code></pre>
-<pre class="r"><code>write.csv(iBtn_summary, &quot;C:\\Users\\jlpeirce\\OneDrive - University of Alaska\\R for UAF AGC\\iButtons\\data\\iBtn_summary.csv&quot;, row.names = FALSE)</code></pre>
 <pre class="r"><code>avg_daily_temp &lt;- iBtn_summary %&gt;%
   group_by(Date, iBtn_ID, Sensor_type, Plot_type) %&gt;% 
   summarize(avg_daily_temp = mean(temp_c, na.rm = T), .groups = &quot;drop&quot;)
@@ -304,8 +304,6 @@ avg_daily_temp</code></pre>
 ##  9 2021-07-19 X112    Sediment      Aquatic forb          14.5 
 ## 10 2021-07-19 X117    Water surface Shallow moss          20.3 
 ## # ... with 4,310 more rows</code></pre>
-<pre class="r"><code>write.csv(avg_daily_temp, &quot;C:\\Users\\jlpeirce\\OneDrive - University of Alaska\\R for UAF AGC\\iButtons\\data\\iBtn_adt_all.csv&quot;, row.names = FALSE)</code></pre>
-</div>
 
 
 
