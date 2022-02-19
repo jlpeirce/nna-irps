@@ -76,6 +76,7 @@ p <- ggplot(avg_daily_temp, aes(x = Date, y = avg_daily_temp, color=Plot_type)) 
 
 p
 ```
+
 ```{r}
 adt_sensor_type <- iBtn_summary %>% 
   group_by(Date, Sensor_type) %>% 
