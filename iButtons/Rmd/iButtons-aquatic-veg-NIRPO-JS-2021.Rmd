@@ -1,5 +1,5 @@
 ---
-title: "iButton Temperature Data from 40 Aquatic Plots"
+title: "iButton Temperature Data from 40 Aquatic Vegetation Plots in Prudhoe Bay, Alaska"
 author: "Emily Watson-Cook, Jana Peirce"
 date: "19 February 2022"
 output:
@@ -187,7 +187,7 @@ p.adt_all_ibtn <- p
 
 ### Let's look at the data in more detail. 
 
-Here is a plot of the average daily temperature of each iButton from July 19 to August 23.
+Here is a plot of the average daily temperature of each iButton from July 19 to August 23 from all sensor locations and all vegetation plot types.
 
 ```{r}
 # plot by sensor location
