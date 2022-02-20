@@ -3,9 +3,9 @@ title: "iButton Temperature Data from 40 Aquatic Plots"
 author: "Emily Watson-Cook, Jana Peirce"
 date: "19 February 2022"
 output:
-  html_document: default
-  word_document: default
   pdf_document: default
+  word_document: default
+  html_document: default
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
@@ -172,11 +172,6 @@ knitr::kable(mean_sensor_plot[, 1:3], "simple", col.names = c("Sensor Type","Plo
 p.mean_sensor_plot <- p
 ```
 
-
-### Let's look at the data in more detail. 
-
-Here is a plot of the average daily temperature of each iButton from July 19 to August 23.
-
 ```{r}
 #plot adt all ibuttons
 
@@ -189,7 +184,10 @@ p
 
 p.adt_all_ibtn <- p
 ```
-Now we can look at the same data but colored to indicated the location of the temperature sensor: At water surface, sediment surface, or below the water surface, but above the vegetation layer. Two sensors were also placed above the ground to record the ambient air temperature at each site.
+
+### Let's look at the data in more detail. 
+
+Here is a plot of the average daily temperature of each iButton from July 19 to August 23.
 
 ```{r}
 # plot by sensor location
@@ -203,7 +201,7 @@ p
 
 p.adt_sensor_loc <-  p
 ```
-This time we'll look at the dominant type of aquatic vegetation in the 1-m plot. For example, here the plot shows the average daily temperature data for each sensor location (water surface, sediment surface, above moss layer) in thick moss plots as purple markers. Based onthe previous plot we can assume the coldest temperatures in thick moss plots come from the sensors at the sediment surface, and the warmest temperatures are from the water surface.  
+Now we can look at the same data but colored to indicated the location of the temperature sensor: At water surface, sediment surface, or below the water surface, but above the vegetation layer. Two sensors were also placed above the ground to record the ambient air temperature at each site.
 
 ```{r}
 # subset to remove sensors not assoc with plots
@@ -223,6 +221,7 @@ p
 
 p.adt_plot_type <- p
 ```
+This time we'll look at the dominant type of aquatic vegetation in the 1-m plot. For example, here the plot shows the average daily temperature data for each sensor location (water surface, sediment surface, above moss layer) in thick moss plots as purple markers. Based onthe previous plot we can assume the coldest temperatures in thick moss plots come from the sensors at the sediment surface, and the warmest temperatures are from the water surface.  
 
 ```{r}
 # Facet plot by sensor type
@@ -238,6 +237,11 @@ p
 p.adt_sensor_facet <- p
 ```
 
+### Let's look at some different facets of the data. 
+
+First, we can focus on the average daily temperatures by sensor location. We see that the coolest temperatures are indeed at the sediment surface and the warmest at the water surface across all plot types.
+
+
 ```{r}
 # Facet plots by plot type
 
@@ -251,10 +255,7 @@ p
 
 p.adt_plot_facet <- p
 ```
-
-### What's going on at the sediment surface?
-
-Let's take a closer look at the differences in temperature at the sediment surface by plot type. As we've seen the coldest temperatures are at the pond bottoms are in plots characterized by thick moss.
+Looking only at the average daily temperatures by aquatic vegetation plot type, we see that the coolest temperatures are in thick moss plots, but there is still a lot of variation, that is likely due to where the different sensors are positioned in the plot.
 
 ```{r}
 # filter out some plots for smaller facet set
@@ -269,7 +270,7 @@ sedi_moss_filter <- avg_daily_temp %>%
 p <- ggplot(sedi_moss_filter, aes(x = Date, y = avg_daily_temp)) +
   geom_point(alpha = 0.3, color = "purple") +
   facet_wrap(~Plot_ID, ncol = 4) + 
-  labs(title = "Avg. Daily Temp at Sediment Layer in Thick Moss Plots", x = NULL, y = "Temperature (\u00B0C)") +
+  labs(title = "Avg. Daily Temp at Sediment Surface in Thick Moss Plots", x = NULL, y = "Temperature (\u00B0C)") +
   theme(plot.title = element_text(hjust = 0.5), axis.text.x = element_text(angle=45, hjust = 1))
 
 p
@@ -277,7 +278,9 @@ p
 p.sedi_moss_facet <- p
 ```
 
-Followed by shallow moss...
+### How does aquatic vegetation type affect temperatures at the bottom of a pond?
+
+For more detail, we can look at the output of each sensor located at the pond bottom by the plot's vegetation type. To understand the variation in sediment surface temperature in thick moss plots, we would need to know more about the properties of each pond, such as its depth, age, water chemistry, the thickness of the vegetation mat, and the distane to ground ice beneath the pond. As we've seen, though, the coldest temperatures overall at pond bottoms are in plots where a layer of thick moss is present.
 
 ```{r}
 # filter out some plots for smaller facet set
@@ -292,16 +295,14 @@ sedi_shmoss_filter <- avg_daily_temp %>%
 p <- ggplot(sedi_shmoss_filter, aes(x = Date, y = avg_daily_temp)) +
   geom_point(alpha = 0.3, color = "darkturquoise") +
   facet_wrap(~Plot_ID, ncol = 4) + 
-  labs(title = "Avg. Daily Temp at Sediment Layer in Shallow Moss Plots", x = NULL, y = "Temperature (\u00B0C)") +
+  labs(title = "Avg. Daily Temp at Sediment Surface in Shallow Moss Plots", x = NULL, y = "Temperature (\u00B0C)") +
   theme(plot.title = element_text(hjust = 0.5), axis.text.x = element_text(angle=45, hjust = 1))
 
 p
 
-
-
 p.sedi_shmoss_facet <- p
 ```
-And aquatic forb plots...
+Followed by plots characterized by shallow moss...
 
 ```{r}
 # filter out some plots for smaller facet set
@@ -316,15 +317,14 @@ sedi_aqforb_filter <- avg_daily_temp %>%
 p <- ggplot(sedi_aqforb_filter, aes(x = Date, y = avg_daily_temp)) +
   geom_point(alpha = 0.3, color = "hotpink2") +
   facet_wrap(~Plot_ID, ncol = 4) + 
-  labs(title = "Avg. Daily Temp at Sediment Layer in Aquatic Forb Plots", x = NULL, y = "Temperature (\u00B0C)") +
+  labs(title = "Avg. Daily Temp at Sediment Surface in Aquatic Forb Plots", x = NULL, y = "Temperature (\u00B0C)") +
   theme(plot.title = element_text(hjust = 0.5), axis.text.x = element_text(angle=45, hjust = 1))
 
 p
 
 p.sedi_aqforb_facet <- p
 ```
-
-Finally, we observe the warmest temperatures at the pond bottom (sediment surface location) in plots without significant vegetation of any type (bare plots).
+...and aquatic forbs.
 
 ```{r}
 # filter out some plots for smaller facet set
@@ -339,13 +339,16 @@ sedi_bare_filter <- avg_daily_temp %>%
 p <- ggplot(sedi_bare_filter, aes(x = Date, y = avg_daily_temp)) +
   geom_point(alpha = 0.3, color = "darkolivegreen4") +
   facet_wrap(~Plot_ID, ncol = 4) + 
-  labs(title = "Avg. Daily Temp at Sediment Layer in Bare Plots", x = NULL, y = "Temperature (\u00B0C)") +
+  labs(title = "Avg. Daily Temp at Sediment Surface in Bare Plots", x = NULL, y = "Temperature (\u00B0C)") +
   theme(plot.title = element_text(hjust = 0.5), axis.text.x = element_text(angle=45, hjust = 1))
 
 p
 
 p.sedi_bare_facet <- p
 ```
+Finally, we observe the warmest temperatures at the pond bottom in "bare" plots - those without significant vegetation of any type.
+
+### That's it! (for now)
 
 ```{r}
 ggsave(here("iButtons/figures/", "adt-all-ibtn8x5.png"), plot = p.adt_all_ibtn, width = 8, height = 5)
