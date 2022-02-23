@@ -78,6 +78,10 @@ iBtn_summary <- iBtn_summaryX %>%
 knitr::kable(head(iBtn_summary[, 1:8]), "simple", col.names = c("Date","Time","iBtn ID","Temp (\u00B0C)","Plot ID","Plot_type","Community","Sensor Type"))
 ```
 
+```{r}
+#write.csv(iBtn_summary, "../data/iBtn_summary_long_pivot2.xlsx") - uncomment to save new csv file to dir
+```
+
 ### Average Daily Temperature calculated (4320 rows)
 
 ```{r}
