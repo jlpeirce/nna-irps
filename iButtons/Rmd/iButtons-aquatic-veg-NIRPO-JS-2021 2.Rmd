@@ -1,0 +1,381 @@
+---
+title: "iButton Temperature Data from 40 Aquatic Vegetation Plots in Prudhoe Bay, Alaska"
+author: "Emily Watson-Cook, Jana Peirce"
+date: "19 February 2022"
+output:
+  pdf_document: default
+  word_document: default
+  html_document: default
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+```{r message = FALSE}
+library(dplyr)
+library(tidyr)
+library(readr)
+library(ggplot2)
+library(scales)
+library(here)
+library(stringr)
+library(tinytex)
+```
+Thermocron iButton data loggers were installed on July 19, 2021, in 30 thaw ponds in the NIRPO and Jorgenson Field Sites, Prudhoe Bay, Alaska, and programmed to record temperature in degrees Celsius every hour. They were retrieved on August 23, 2021.
+
+Sensors were installed in the following locations in each pond:
+
+* Water surface
+* Above the moss layer
+* At the sediment surface. 
+
+Two additional sensors were installed to record air temperature at each site (NIRPO and Jorgenson), and one sensor was installed at the water surface in a lake at the Jorgenson site.
+
+
+```{r}
+#read in ibutton temp data
+
+ibtn_temp <- read.csv("../data/ibtn_temp_tbl.csv")
+
+```
+
+```{r}
+# transform data table from wide to long format
+
+temp_long <- ibtn_temp %>% 
+  pivot_longer(cols = c(-Date, -Time), names_to = "iBtn_ID", values_to = "temp_c") 
+
+```
+
+```{r}
+# convert date col from char to date format
+date_temp_long <- data.frame(temp_long)
+date_temp_long$Date <- as.Date(date_temp_long$Date)
+```
+
+```{r}
+#read in plot type table
+
+plot_type <- read.csv("../data/plot_type_long2.csv")
+
+```
+
+```{r}
+# join both tables together
+
+iBtn_summaryX <- left_join(date_temp_long, plot_type, by = c("iBtn_ID")) 
+
+```
+
+### Raw Data (99,720 rows)
+
+```{r}
+# remove leading X from iBtn_ID
+
+iBtn_summary <- iBtn_summaryX %>% 
+  mutate_at("iBtn_ID", str_replace, "X", "")
+
+knitr::kable(head(iBtn_summary[, 1:8]), "simple", col.names = c("Date","Time","iBtn ID","Temp (\u00B0C)","Plot ID","Plot_type","Community","Sensor Type"))
+```
+
+### Average Daily Temperature calculated (4320 rows)
+
+```{r}
+# calculate average daily temp
+
+avg_daily_temp <- iBtn_summary %>%
+  group_by(Date, iBtn_ID, Plot_ID, Sensor_type, Plot_type, Community) %>% 
+  summarize(avg_daily_temp = mean(temp_c, na.rm = T), .groups = "drop") %>% 
+  mutate(across(where(is.numeric), ~ round(., 1)))
+
+knitr::kable(head(avg_daily_temp[, 1:7]), "simple", col.names = c("Date","iBtn ID","Plot ID","Sensor Type","Plot Type","Community","Avg Daily Temp (\u00B0C)"))
+```
+
+```{r}
+# calculate avg daily temp for each day by sensor type
+
+adt_sensor_type <- iBtn_summary %>% 
+  group_by(Date, Sensor_type) %>% 
+  summarize(avg_daily_temp = mean(temp_c, na.rm = T), .groups = "drop")
+```
+
+```{r}
+# calculate mean for all days by sensor location
+
+mean_sensor_type <- iBtn_summary %>% 
+  group_by(Sensor_type) %>% 
+  summarize(avg_daily_temp = mean(temp_c, na.rm = T), .groups = "drop") %>% 
+  mutate(across(where(is.numeric), ~ round(., 1)))
+```
+
+```{r}
+# plot mean sensor type for season
+
+p <- ggplot(mean_sensor_type, aes(Sensor_type, avg_daily_temp)) +
+  geom_col(fill="salmon") +
+  labs(title = "Mean Temperature by Sensor Location", x = "Sensor Location", y = "Mean Temp (\u00B0C)") + theme(panel.background = element_blank(), plot.title = element_text(hjust = 0.5)) +
+  geom_text(aes(label = avg_daily_temp), vjust = -0.5)
+
+p
+
+knitr::kable(head(mean_sensor_type[, 1:2]), "simple", col.names = c("Sensor Type", "Mean Temp (\u00B0C)"))
+
+p.mean_sensor <- p
+```
+
+```{r}
+# subset to remove sensors not assoc with plots
+# then calculate average daily temp for each day by plot type
+
+iBtn_summary_plot <- subset(iBtn_summary, Plot_type!="N/A" & Plot_type!="Lake")
+
+adt_plot_type <- iBtn_summary_plot %>% 
+  group_by(Date, Plot_type) %>% 
+  summarize(avg_daily_temp = mean(temp_c, na.rm = T), .groups = "drop")
+```
+
+```{r}
+# calculate mean for all days by plot type
+
+mean_plot_type <- iBtn_summary_plot %>% 
+  group_by(Plot_type) %>% 
+  summarize(avg_daily_temp = mean(temp_c, na.rm = T), .groups = "drop") %>% mutate(across(where(is.numeric), ~ round(., 1)))
+```
+
+```{r}
+# plot mean plot type for season
+
+p <- ggplot(mean_plot_type, aes(Plot_type, avg_daily_temp)) +
+  geom_col(fill="darkolivegreen3") +
+  labs(title = "Mean Temperature by Aquatic Plot Type", x = "Plot Type", y = "Mean Temp (\u00B0C)") + theme(panel.background = element_blank(), plot.title = element_text(hjust = 0.5)) +
+  geom_text(aes(label = avg_daily_temp), vjust = -0.5)
+
+p
+
+knitr::kable(head(mean_plot_type[, 1:2]), "simple", col.names = c("Plot Type", "Mean Temp (\u00B0C)"))
+
+p.mean_plot <- p
+```
+
+```{r}
+# calculate mean for all days by sensor location and plot type
+
+mean_sensor_plot <- iBtn_summary_plot %>% 
+  group_by(Sensor_type, Plot_type) %>% 
+  summarize(avg_daily_temp = mean(temp_c, na.rm = T), .groups = "drop") %>% 
+  mutate(across(where(is.numeric), ~ round(., 1)))
+
+p <- ggplot(mean_sensor_plot, aes(x = Sensor_type, y = avg_daily_temp, fill = Plot_type)) +
+  geom_col(position = "dodge2") +
+  labs(title = "Mean Temperature by Sensor Location and Plot Type", x = NULL, y = "Mean Temp (\u00B0C)") + theme(panel.background = element_blank(), plot.title = element_text(hjust = 0.5), legend.title = element_blank()) 
+
+p
+
+knitr::kable(mean_sensor_plot[, 1:3], "simple", col.names = c("Sensor Type","Plot Type","Mean Temp (\u00B0C)"))
+
+p.mean_sensor_plot <- p
+```
+
+```{r}
+#plot adt all ibuttons
+
+p <- ggplot(avg_daily_temp, aes(x = Date, y = avg_daily_temp)) +
+  geom_point(alpha = 0.3, color = "dodgerblue2") +
+  labs(title = "Average Daily Temperature", x = NULL, y = "Temperature (\u00B0C)") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+p
+
+p.adt_all_ibtn <- p
+```
+
+### Let's look at the data in more detail. 
+
+Here is a plot of the average daily temperature of each iButton from July 19 to August 23 from all sensor locations and all vegetation plot types.
+
+```{r}
+# plot by sensor location
+
+p <- ggplot(avg_daily_temp, aes(x = Date, y = avg_daily_temp, color=Sensor_type)) +
+  geom_point(alpha = 0.3) +
+  labs(title = "Average Daily Temperature by Sensor Location", x = NULL, y = "Temperature (\u00B0C)", color = "Sensor Type")  +
+  theme(plot.title = element_text(hjust = 0.5))
+
+p
+
+p.adt_sensor_loc <-  p
+```
+Now we can look at the same data but colored to indicated the location of the temperature sensor: At water surface, sediment surface, or below the water surface, but above the vegetation layer. Two sensors were also placed above the ground to record the ambient air temperature at each site.
+
+```{r}
+# subset to remove sensors not assoc with plots
+
+adt_plot_clean <- subset(avg_daily_temp, Plot_type!="N/A" & Plot_type!="Lake")
+```
+
+```{r}
+# plot by plot type
+
+p <- ggplot(adt_plot_clean, aes(x = Date, y = avg_daily_temp, color=Plot_type)) +
+  geom_point(alpha = 0.5) +
+  labs(title = "Average Daily Temperature by Aquatic Plot Type", x = NULL, y = "Temperature (\u00B0C)", color = "Plot Type")  +
+  theme(plot.title = element_text(hjust = 0.5))
+
+p
+
+p.adt_plot_type <- p
+```
+This time we'll look at the dominant type of aquatic vegetation in the 1-m plot. For example, here the plot shows the average daily temperature data for each sensor location (water surface, sediment surface, above moss layer) in thick moss plots as purple markers. Based onthe previous plot we can assume the coldest temperatures in thick moss plots come from the sensors at the sediment surface, and the warmest temperatures are from the water surface.  
+
+```{r}
+# Facet plot by sensor type
+
+p <- ggplot(avg_daily_temp, aes(x = Date, y = avg_daily_temp)) +
+  geom_point(alpha=0.2, color = "firebrick") +
+  facet_wrap(~Sensor_type, ncol=2) +
+  labs(title = "Average Daily Temperature by Sensor Location", x = NULL, y = "Temp (\u00B0C)")  +
+  theme(plot.title = element_text(hjust = 0.5))
+
+p
+
+p.adt_sensor_facet <- p
+```
+
+### Let's look at some different facets of the data. 
+
+First, we can focus on the average daily temperatures by sensor location. We see that the coolest temperatures are indeed at the sediment surface and the warmest at the water surface across all plot types.
+
+
+```{r}
+# Facet plots by plot type
+
+p <- ggplot(adt_plot_clean, aes(x = Date, y = avg_daily_temp)) +
+  geom_point(alpha=0.2, color = "darkolivegreen4") +
+  facet_wrap(~Plot_type, ncol=3) +
+  labs(title = "Average Daily Temperature by Plot Type", x = NULL, y = "Temp (\u00B0C)") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+p
+
+p.adt_plot_facet <- p
+```
+Looking only at the average daily temperatures by aquatic vegetation plot type, we see that the coolest temperatures are in thick moss plots, but there is still a lot of variation, that is likely due to where the different sensors are positioned in the plot.
+
+```{r}
+# filter out some plots for smaller facet set
+
+sedi_moss_filter <- avg_daily_temp %>% 
+    filter(Sensor_type == "Sediment", Plot_type == "Moss")
+```
+
+```{r}
+# Facet plots by select plots
+
+p <- ggplot(sedi_moss_filter, aes(x = Date, y = avg_daily_temp)) +
+  geom_point(alpha = 0.3, color = "purple") +
+  facet_wrap(~Plot_ID, ncol = 4) + 
+  labs(title = "Avg. Daily Temp at Sediment Surface in Moss Plots", x = NULL, y = "Temperature (\u00B0C)") +
+  theme(plot.title = element_text(hjust = 0.5), axis.text.x = element_text(angle=45, hjust = 1))
+
+p
+
+p.sedi_moss_facet <- p
+```
+
+### How does aquatic vegetation type affect temperatures at the bottom of a pond?
+
+For more detail, we can look at the output of each sensor located at the pond bottom by the plot's vegetation type. To understand the variation in sediment surface temperature in thick moss plots, we would need to know more about the properties of each pond, such as its depth, age, water chemistry, the thickness of the vegetation mat, and the distane to ground ice beneath the pond. As we've seen, though, the coldest temperatures overall at pond bottoms are in plots where a layer of thick moss is present.
+
+```{r}
+# filter out some plots for smaller facet set
+
+sedi_aqforb_filter <- avg_daily_temp %>% 
+    filter(Sensor_type == "Sediment", Plot_type == "Forb")
+```
+
+```{r}
+# Facet plots by select plots
+
+p <- ggplot(sedi_aqforb_filter, aes(x = Date, y = avg_daily_temp)) +
+  geom_point(alpha = 0.3, color = "hotpink2") +
+  facet_wrap(~Plot_ID, ncol = 4) + 
+  labs(title = "Avg. Daily Temp at Sediment Surface in Forb Plots", x = NULL, y = "Temperature (\u00B0C)") +
+  theme(plot.title = element_text(hjust = 0.5), axis.text.x = element_text(angle=45, hjust = 1))
+
+p
+
+p.sedi_aqforb_facet <- p
+```
+...and aquatic forbs.
+
+```{r}
+# filter out some plots for smaller facet set
+
+sedi_bare_filter <- avg_daily_temp %>% 
+    filter(Sensor_type == "Sediment", Plot_type == "Sparse")
+```
+
+```{r}
+# Facet plots by select plots
+
+p <- ggplot(sedi_bare_filter, aes(x = Date, y = avg_daily_temp)) +
+  geom_point(alpha = 0.3, color = "darkolivegreen4") +
+  facet_wrap(~Plot_ID, ncol = 4) + 
+  labs(title = "Avg. Daily Temp at Sediment Surface in Sparse Plots", x = NULL, y = "Temperature (\u00B0C)") +
+  theme(plot.title = element_text(hjust = 0.5), axis.text.x = element_text(angle=45, hjust = 1))
+
+p
+
+p.sedi_bare_facet <- p
+```
+Finally, we observe the warmest temperatures at the pond bottom in "bare" plots - those without significant vegetation of any type.
+
+### That's it! (for now)
+
+```{r}
+ggsave(here("iButtons/figures/", "adt-all-ibtn8x5.png"), plot = p.adt_all_ibtn, width = 8, height = 5)
+```
+
+```{r}
+ggsave(here("iButtons/figures/", "adt-sensor-loc8x5.png"), plot = p.adt_sensor_loc, width = 8, height = 5)
+```
+
+```{r}
+ggsave(here("iButtons/figures/", "adt-plot-type8x5.png"), plot = p.adt_plot_type, width = 8, height = 5)
+```
+
+```{r}
+# smller size col plot
+
+ggsave(here("ibuttons/figures/", "mean-sensor-loc.png"), plot = p.mean_sensor, height = 5, width = 4, units = "in")
+```
+
+```{r}
+# smaller size for col plots
+
+ggsave(here("ibuttons/figures/", "mean-plot.png"), plot = p.mean_plot, height = 5, width = 4, units = "in")
+```
+
+```{r}
+ggsave(here("ibuttons/figures/", "mean-sensor-plot.png"), plot = p.mean_sensor_plot, width = 8, height = 5, units = "in")
+```
+
+```{r}
+ggsave(here("iButtons/figures/", "adt-sensor-facet.png"), plot = p.adt_sensor_facet, width = 8, height = 5)
+```
+
+```{r}
+ggsave(here("iButtons/figures/", "adt-plot-facet.png"), plot = p.adt_plot_facet, width = 9, height = 3)
+```
+
+```{r}
+ggsave(here("ibuttons/figures/","sedi-moss-facet.png"), plot = p.sedi_moss_facet, width = 8, height = 8, units = "in")
+```
+
+```{r}
+ggsave(here("ibuttons/figures/","sedi-aqforb-facet.png"), plot = p.sedi_aqforb_facet, width = 8, height = 5, units = "in")
+```
+
+```{r}
+ggsave(here("ibuttons/figures/","sedi-bare-facet.png"), plot = p.sedi_bare_facet, width = 8, height = 5, units = "in")
+```

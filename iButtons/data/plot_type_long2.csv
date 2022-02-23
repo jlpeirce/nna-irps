@@ -1,0 +1,121 @@
+iBtn_ID,Plot_ID,Plot_type,Community,Sensor_type
+X1,21A-01,Moss,CALRIC,Water surface
+X2,21A-01,Moss,CALRIC,Above veg
+X4,21A-01,Moss,CALRIC,Sediment
+X5,21A-02,Moss,SCOSCO,Water surface
+X6,21A-02,Moss,SCOSCO,Above veg
+X9,21A-02,Moss,SCOSCO,Sediment
+X10,21A-03,Forb,HIPVUL,Sediment
+X14,21A-03,Forb,HIPVUL,Above veg
+X19,21A-03,Forb,HIPVUL,Water surface
+X20,21A-04,Moss,SCOSCO,Water surface
+X21,21A-05,Moss,CALRIC,Above veg
+X22,21A-04,Moss,SCOSCO,Sediment
+X23,21A-05,Moss,CALRIC,Water surface
+X24,21A-04,Moss,SCOSCO,Above veg
+X25,21A-05,Moss,CALRIC,Sediment
+X27,21A-06,Moss,CALRIC,Water surface
+X28,21A-06,Moss,CALRIC,Above veg
+X29,21A-06,Moss,CALRIC,Sediment
+X30,21A-07,Sparse,HIPVUL,Water surface
+X32,21A-07,Sparse,HIPVUL,Above veg
+X34,21A-07,Sparse,HIPVUL,Sediment
+X35,21A-08,Moss,SCOSCO,Water surface
+X37,21A-08,Moss,SCOSCO,Above veg
+X38,21A-08,Moss,SCOSCO,Sediment
+X39,21A-10,Moss,CALRIC,Water surface
+X41,21A-10,Moss,CALRIC,Above veg
+X42,21A-10,Moss,CALRIC,Sediment
+X46,21A-09,Moss,CALRIC,Water surface
+X47,21A-09,Moss,CALRIC,Above veg
+X48,21A-09,Moss,CALRIC,Sediment
+X50,21A-11,Moss,SCOSCO,Water surface
+X52,21A-11,Moss,SCOSCO,Above veg
+X53,21A-11,Moss,SCOSCO,Sediment
+X57,21A-12,Sparse,SPARSE-A,Water surface
+X58,21A-12,Sparse,SPARSE-A,Above veg
+X59,21A-12,Sparse,SPARSE-A,Sediment
+X60,21A-13,Forb,HIPVUL,Water surface
+X64,21A-13,Forb,HIPVUL,Above veg
+X65,21A-13,Forb,HIPVUL,Sediment
+X66,21A-14,Sparse,SPARSE-A,Water surface
+X67,21A-14,Sparse,SPARSE-A,Above veg
+X69,21A-14,Sparse,SPARSE-A,Sediment
+X70,21A-15,Moss,CALRIC,Water surface
+X72,21A-15,Moss,CALRIC,Above veg
+X74,21A-15,Moss,CALRIC,Sediment
+X75,21A-16,Sparse,SPARSE-B,Water surface
+X76,21A-16,Sparse,SPARSE-B,Above veg
+X77,21A-16,Sparse,SPARSE-B,Sediment
+X79,21A-17,Forb,RANGME,Water surface
+X80,21A-17,Forb,RANGME,Above veg
+X82,21A-17,Forb,RANGME,Sediment
+X83,21A-18,Moss,SCOSCO,Water surface
+X85,21A-18,Moss,SCOSCO,Above veg
+X86,21A-18,Moss,SCOSCO,Sediment
+X90,21A-19,Sparse,SPARSE-A,Water surface
+X91,21A-19,Sparse,SPARSE-A,Above veg
+X95,21A-19,Sparse,SPARSE-A,Sediment
+X96,21A-20,Lake,N/A,Water surface
+X101,21A-20,Lake,N/A,Sediment
+X103,21A-21,Moss,PSETUR,Water surface
+X105,21A-21,Moss,PSETUR,Above veg
+X108,21A-21,Moss,PSETUR,Sediment
+X110,21A-22,Forb,HIPVUL,Water surface
+X111,21A-22,Forb,HIPVUL,Above veg
+X112,21A-22,Forb,HIPVUL,Sediment
+X117,21A-23,Moss,CALRIC,Water surface
+X119,21A-23,Moss,CALRIC,Above veg
+X120,21A-23,Moss,CALRIC,Sediment
+X122,21A-24,Sparse,SPARSE-B,Water surface
+X125,21A-24,Sparse,SPARSE-B,Above veg
+X126,21A-24,Sparse,SPARSE-B,Sediment
+X127,21A-25,Forb,HIPVUL,Water surface
+X129,21A-25,Forb,HIPVUL,Above veg
+X130,21A-25,Forb,HIPVUL,Sediment
+X134,21A-26,Moss,CALRIC,Water surface
+X135,21A-26,Moss,CALRIC,Above veg
+X136,21A-26,Moss,CALRIC,Sediment
+X138,21A-27,Sparse,SPARSE-B,Water surface
+X141,21A-27,Sparse,SPARSE-B,Above veg
+X142,21A-27,Sparse,SPARSE-B,Sediment
+X144,21A-28,Forb,HIPVUL,Water surface
+X145,21A-28,Forb,HIPVUL,Above veg
+X146,21A-28,Forb,HIPVUL,Sediment
+X147,21A-29,Moss,CALRIC,Water surface
+X149,21A-29,Moss,CALRIC,Above veg
+X152,21A-29,Moss,CALRIC,Sediment
+X153,21A-30,Sparse,SPARSE-B,Water surface
+X155,21A-30,Sparse,SPARSE-B,Above veg
+X157,21A-30,Sparse,SPARSE-B,Sediment
+X158,21A-31,Forb,RANGME,Water surface
+X160,21A-31,Forb,RANGME,Above veg
+X161,21A-31,Forb,RANGME,Sediment
+X163,21A-32,Moss,PSETUR,Water surface
+X165,21A-32,Moss,PSETUR,Above veg
+X166,21A-32,Moss,PSETUR,Sediment
+X167,21A-33,Moss,CALRIC,Water surface
+X168,21A-33,Moss,CALRIC,Above veg
+X169,21A-33,Moss,CALRIC,Sediment
+X170,21A-34,Moss,CALRIC,Water surface
+X172,21A-34,Moss,CALRIC,Above veg
+X173,21A-34,Moss,CALRIC,Sediment
+X174,21A-35,Sparse,SPARSE-B,Water surface
+X175,21A-35,Sparse,SPARSE-B,Above veg
+X176,21A-35,Sparse,SPARSE-B,Sediment
+X177,21A-36,Moss,CALRIC,Water surface
+X180,21A-36,Moss,CALRIC,Sediment
+X181,21A-37,Moss,CALRIC,Water surface
+X182,21A-37,Moss,CALRIC,Above veg
+X184,21A-37,Moss,CALRIC,Sediment
+X185,21A-38,Sparse,SPARSE-A,Water surface
+X186,21A-38,Sparse,SPARSE-A,Above veg
+X187,21A-38,Sparse,SPARSE-A,Sediment
+X188,21A-39,Moss,CALRIC,Water surface
+X190,21A-39,Moss,CALRIC,Above veg
+X192,21A-39,Moss,CALRIC,Sediment
+X194,21A-40,Forb,HIPVUL,Water surface
+X195,21A-40,Forb,HIPVUL,Above veg
+X196,21A-40,Forb,HIPVUL,Sediment
+X198,JS,N/A,N/A,Air
+X199,NIRPO,N/A,N/A,Air
