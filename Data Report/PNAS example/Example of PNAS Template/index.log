@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.2.26)  27 FEB 2022 00:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.2.26)  27 FEB 2022 01:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -802,25 +802,386 @@ Package: titlesec 2021/07/05 v2.14 Sectioning titles
 \c@ttlp@side=\count346
 \ttlp@side=\count347
 \pnas@vertadjust=\skip144
+(c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count348
+\output=\toks45
+\linenoprevgraf=\count349
+\linenumbersep=\dimen321
+\linenumberwidth=\dimen322
+\c@linenumber=\count350
+\c@pagewiselinenumber=\count351
+\c@LN@truepage=\count352
+\c@internallinenumber=\count353
+\c@internallinenumbers=\count354
+\quotelinenumbersep=\dimen323
+\bframerule=\dimen324
+\bframesep=\dimen325
+\bframebox=\box78
+LaTeX Info: Redefining \\ on input line 3056.
+) (c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/footmisc/footmisc.sty
+Package: footmisc 2022/02/14 v6.0b a miscellany of footnote facilities
+\FN@temptoken=\toks46
+\footnotemargin=\dimen326
+\@outputbox@depth=\dimen327
+Package footmisc Info: Declaring symbol style bringhurst on input line 686.
+Package footmisc Info: Declaring symbol style chicago on input line 694.
+Package footmisc Info: Declaring symbol style wiley on input line 703.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 714.
+Package footmisc Info: Declaring symbol style lamport* on input line 734.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 755.
+)
+\c@acknow@section=\count355
+\c@matmethods@section=\count356
+(c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip145
+\enit@outerparindent=\dimen328
+\enit@toks=\toks47
+\enit@inbox=\box79
+\enit@count@id=\count357
+\enitdp@description=\count358
+) (c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/sidecap/sidecap.sty
+Package: sidecap 2003/06/06 v1.6f SideCap Package (RN/HjG)
+\SC@BOXWD=\dimen329
+\SC@CAPWD=\dimen330
+\SC@tempdima=\dimen331
+\SC@tempdimb=\dimen332
+\c@SC@C=\count359
+\SC@BOX=\box80
+) (c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/sttools/stfloats.sty
+Package: stfloats 2017/03/27 v3.3 Improve float mechanism and baselineskip settings
+\@dblbotnum=\count360
+\c@dblbotnumber=\count361
+) (c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/marginnote/marginnote.sty
+Package: marginnote 2018/08/09 v1.4b non floating margin notes for LaTeX
+\c@mn@abspage=\count362
+)
+\@float@every@@widetext=\toks48
+\c@@widetext=\count363
+) (c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2022/02/22 v3.0c Micro-typographical refinements (RS)
+\MT@toks=\toks49
+\MT@tempbox=\box81
+\MT@count=\count364
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1027.
+LaTeX Info: Redefining \leftprotrusion on input line 1028.
+LaTeX Info: Redefining \rightprotrusion on input line 1036.
+LaTeX Info: Redefining \textls on input line 1200.
+\MT@outer@kern=\dimen333
+LaTeX Info: Redefining \textmicrotypecontext on input line 1786.
+\MT@listname@count=\count365
+(c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2022/02/22 v3.0c Definitions specific to pdftex (RS)
+LaTeX Info: Redefining \lsstyle on input line 897.
+LaTeX Info: Redefining \lslig on input line 897.
+\MT@outer@space=\skip146
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+(c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2022/02/22 v3.0c microtype main configuration file (RS)
+)) (c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+\cslhangindent=\skip147
+\csllabelwidth=\skip148
+\cslentryspacingunit=\skip149
+(./pnasresearcharticle.sty
+Package: pnasresearcharticle 2018/05/06 v1.3 PNAS two column research article style
+\@float@every@sigstatement=\toks50
+\c@sigstatement=\count366
+) (./index.aux)
+\openout1 = `index.aux'.
 
-! LaTeX Error: File `lineno.sty' not found.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+(c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+(c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+Package hyperref Info: Link coloring ON on input line 130.
+(c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+(c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count367
+)
+LaTeX Info: Redefining \ref on input line 130.
+LaTeX Info: Redefining \pageref on input line 130.
+LaTeX Info: Redefining \nameref on input line 130.
+(./index.out) (./index.out)
+\@outlinefile=\write4
+\openout4 = `index.out'.
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: sty)
+(c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/draftwatermark/draftwatermark.sty
+Package: draftwatermark 2020/12/08 3.0 Put a gray textual watermark on document pages
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <custom>
+* layout(width,height): (587.19374pt,785.93625pt)
+* layoutoffset:(h,v)=(13.55061pt,4.51686pt)
+* modes: includehead includefoot twoside 
+* h-part:(L,W,R)=(38.5pt, 505.69374pt, 43.0pt)
+* v-part:(T,H,B)=(43.0pt, 710.93625pt, 32.0pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=505.69374pt
+* \textheight=675.93625pt
+* \oddsidemargin=-20.21938pt
+* \evensidemargin=-15.71938pt
+* \topmargin=-24.75313pt
+* \headheight=0.0pt
+* \headsep=10.0pt
+* \topskip=9.0pt
+* \footskip=25.0pt
+* \marginparwidth=38.0pt
+* \marginparsep=10.0pt
+* \columnsep=13.5pt
+* \skip\footins=8.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumntrue
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Enter file name: 
-! Emergency stop.
-<read *> flag
-             
-l.357 \else
-           ^^M 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: sidecap package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package newfloat Info: `float' package detected.
+Package newfloat Info: `sidecap' package detected.
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             https://www.ctan.org/pkg/pageslts
+(lastpage)             ! on input line 130.
+
+Package sidecap Warning: Package `ragged2e' not found -- expect bad formatting.
+
+LaTeX Info: Redefining \microtypecontext on input line 130.
+Package microtype Info: Applying patch `item' on input line 130.
+Package microtype Info: Applying patch `toc' on input line 130.
+
+Package microtype Warning: Unable to apply patch `eqnum' on input line 130.
+
+Package microtype Info: Applying patch `footnote' on input line 130.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+LaTeX Info: Redefining \showhyphens on input line 130.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+(c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
+)
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 138.
+(c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmss.fd
+File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <9> not available
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 138.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmss' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <22> not available
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 138.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 138.
+(c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.54997pt on input line 138.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `phv' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 8.54997pt on input line 138.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 138.
+(c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 138.
+(c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 138.
+(c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 138.
+(c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 138.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 138.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 138.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 138.
+(c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 138.
+(c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 5.69998pt on input line 138.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 6.64998pt on input line 138.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 138.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 4.74998pt on input line 138.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 7.59998pt on input line 140.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 9.49997pt on input line 166.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 9.49997pt on input line 166.
+Package mdframed Info: mdframed works in twoside mode on input line 185.
+Package mdframed Info: mdframed inside float 
+ mdframed uses option nobreak mdframed on input line 185.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 185.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 5.69998pt on input line 185.
+
+Underfull \hbox (badness 1852) in paragraph at lines 198--203
+[] []\T1/phv/b/n/9 (+20) For-mat.[] \T1/lmr/m/n/9 (+20) Many au-thors find it use-ful to or-ga-nize their
+ []
+
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 6.64998pt on input line 242.
+LaTeX Font Info:    Trying to load font information for T1+bch on input line 242.
+(c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/t1bch.fd
+File: t1bch.fd 2004/10/18 font definitions for T1/bch.
+) (c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-bch.cfg
+File: mt-bch.cfg 2007/03/03 v1.5 microtype config. file: Bitstream Charter (RS)
+) [1{c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
+<frog.png, id=112, 200.75pt x 198.7425pt>
+File: frog.png Graphic file (type png)
+<use frog.png>
+Package pdftex.def Info: frog.png  used on input line 245.
+(pdftex.def)             Requested size: 200.7495pt x 198.742pt.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 261.
+(c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Underfull \hbox (badness 1394) in paragraph at lines 277--281
+\T1/lmr/m/n/9 (+20) are to use the \T1/lmtt/m/n/9 \begin{figure*}...\end{figure*} \T1/lmr/m/n/9 (+20) en-vi-
+ []
+
+
+Underfull \hbox (badness 2443) in paragraph at lines 277--281
+\T1/lmr/m/n/9 (+20) ron-ment men-tioned above for fig-ures, or to use the
+ []
+
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 7.59998pt on input line 313.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <8> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 313.
+LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
+(Font)              scaled to size 7.59998pt on input line 313.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 375.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 6.64998pt on input line 375.
+[2 <./frog.png>]
+Overfull \hbox (1.88892pt too wide) in paragraph at lines 378--383
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 378--383
+
+ []
+
+
+Overfull \hbox (1.88892pt too wide) in paragraph at lines 384--389
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 384--389
+
+ []
+
+
+Overfull \hbox (1.88892pt too wide) in paragraph at lines 390--396
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--396
+
+ []
+
+
+AED: lastpage setting LastPage
+[3
+
+] (./index.aux)
+Package rerunfilecheck Info: File `index.out' has not changed.
+(rerunfilecheck)             Checksum: 1C0CA927B8DE19F6ADDECA65D56C70C0;2752.
+ ) 
 Here is how much of TeX's memory you used:
- 25975 strings out of 480236
- 486728 string characters out of 5893968
- 763985 words of memory out of 5000000
- 43500 multiletter control sequences out of 15000+600000
- 472555 words of font info for 30 fonts, out of 8000000 for 9000
+ 30117 strings out of 480236
+ 564488 string characters out of 5893968
+ 888286 words of memory out of 5000000
+ 47145 multiletter control sequences out of 15000+600000
+ 563613 words of font info for 240 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 115i,0n,118p,448b,92s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 115i,14n,118p,1002b,1120s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}<c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb><c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi9.pfb><c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr5.pfb><c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri8.pfb><c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt9.pfb><c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb><c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Users/jlpeirce/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on index.pdf (3 pages, 366687 bytes).
+PDF statistics:
+ 229 PDF objects out of 1000 (max. 8388607)
+ 190 compressed objects within 2 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 71858 words of extra memory for PDF output out of 74296 (max. 10000000)
 
-!  ==> Fatal error occurred, no output PDF file produced!

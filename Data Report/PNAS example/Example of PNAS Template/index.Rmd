@@ -1,54 +1,65 @@
 ---
-title: Template for preparing your research report submission to PNAS using RMarkdown
+title: Observations in ice-rich permafrost systems, Prudhoe Bay Alaska, 2020-2021
 
 # Use letters for affiliations, numbers to show equal authorship (if applicable) and to indicate the corresponding author
 author:
-  - name: Alice Anonymous
-    affiliation: a,1,2
-  - name: Bob Security
-    affiliation: a,b
+  - name: Donald A. Walker
+    affiliation: 1
+  - name: Amy L. Breen
+    affiliation: 2
+  - name: Anja N. Kade
+    affiliation: 3
+  - name: Mikhail Kanevskiy
+    affiliation: 4
+  - name: Dmitry J. Nicolsky
+    affiliation: 5
+  - name: Ronald P. Daanen
+    affiliation: 6
+  - name: Benjamin M. Jones
+    affiliation: 4
+  - name: Helena Bergstedt
+    affiliation: 7
+  - name: Emily Watson-Cook
+    affiliation: 1
+  - name: Jana L. Peirce
+    affiliation: 8
 address:
-  - code: a
-    address: Some Institute of Technology, Department, Street, City, State, Zip
-  - code: b
-    address: Another University Department, Street, City, State, Zip
+  - code: 1
+    address: University of Alaska Fairbanks, Institute of Arctic Biology, Alaska Geobotany Center, and Department of Biology and Wildlife, Fairbanks, Alaska
+  - code: 2
+    address: University of Alaska Fairbanks, International Arctic Research Center, Fairbanks, Alaska
+  - code: 3
+    address: University of Alaska Fairbanks, Department of Biology and Wildlife, Fairbanks, Alaska
+  - code: 4
+    address: University of Alaska Fairbanks, Institute of Northern Engineering, Fairbanks, Alaska
+  - code: 5
+    address: University of Alaska Fairbanks, Geophysical Institute, Fairbanks, Alaska
+  - code: 6
+    address: Alaska Division of Geological & Geophysical Surveys, Department of Natural Resources, Fairbanks, Alaska
+  - code: 7
+    address: b.geos GmbH, Vienna, Austria
+  - code: 8
+    address: University of Alaska Fairbanks
 
 corresponding_author:
-  code: 2
-  text: "To whom correspondence should be addressed. E-mail: bob@email.com"
+  code: 1
+  text: "To whom correspondence should be addressed. Email: dawalker@alaska.edu"
 
 # For footer text
-lead_author_surname: Anonymous
+lead_author_surname: Walker
 
-## Remove this if not required    
-equal_authors:
-  code: 1
-  text: "A.O.(Author One) and A.T. (Author Two) contributed equally to this work (remove if not applicable)."
-
-
-author_contributions: |
-  Please provide details of author contributions here.
-
-## Remove this if not required
-conflict_of_interest: |
-  Please declare any conflict of interest here.
 
 abstract: |
-  Please provide an abstract of no more than 250 words in a single paragraph. Abstracts should explain to the general reader the major contributions of the article. References in the abstract must be cited in full within the abstract itself and cited in the text.
+  The National Science Foundation’s Navigating the New Arctic (NNA) project" “Landscape evolution and adapting to change in Ice-Rich Permafrost Systems (NNA-IRPS)” is focused on ice-rich permafrost systems. This data report covers field seasons in 2020 and 2021 at the NNA-IRPS field sites in the Prudhoe Bay Oilfield (PBO). The 2020 field season was abbreviated because of the Covid restrictions on travel and access to hotel facilities in the PBO.The primary goals were to (1) conduct a reconnaissance of a new Natural Ice-Rich Permafrost Observatory (NIRPO), (2) monitor late-season thaw depths, water-depths, ice-wedge polygon microrelief contrasts, and vegetation distribution along six previously established transects in the PBO, and (3) provide training and field-site overview for a new graduate student and post doc.The 2021 field season  focused on baseline information for the NIRPO site. An overview of the tasks, field team, schedule, and logistics is followed by sections devoted to summaries of (1) remote sensing activities (Daanen and Jones), (2) observations along transects at the NIRPO and other PBO transects (Walker et al.), (3) observations from the NIRPO terrestrial plots (Walker and Breen), (4) thermokarst-pond vegetation and environments (Watson-Cook), (5) trace-gas fluxes (Kade), (6) basal-peat dating (Bergstedt), (7) permafrost borehole temperature stations (Nicolsky and Romanovsky), and (8) studies of permafrost cryostructure (Kanevskiy and Shur). Results of some preliminary analyses are presented with these summaries. Tables containing several of the datasets are in the appendices with instructions on where to access the data in the Arctic Data Center.
 
-
-significance: |
-  Authors must submit a 120-word maximum statement about the significance of their research paper written at a level understandable to an undergraduate educated scientist outside their field of speciality. The primary goal of the Significance Statement is to explain the relevance of the work in broad context to a broad readership. The Significance Statement appears in the paper itself and is required for all research papers.
 
 acknowledgements: |
-  Please include your acknowledgments here, set in a single paragraph. Please do not include any acknowledgments in the Supporting Information, or anywhere else in the manuscript.
+  This project was primarily funded by the National Science Foundation NNA Award (1928237) and built on a previous award from the NSF ArcSEES program (1263854) with contributions the Bureau of Ocean Energy Management, Bureau of Land Management, and U.S. Geological Survey. The aerial surveys were made with the collaboration of the Alaska Division of Geological and Geophysical Surveys. The participation of several of members of the expedition was possible because of other NSF awards to Ben Jones and colleagues (1806213), Yuri Shur/Mikhail Kanevskiy (820883), and Vladimir Romanovsky/Dmitry Nicolsky (1832238, 1927708). Logistics support was provided the Battelle Arctic Research Operations office in Fairbanks, and the Institute of Arctic Biology, University of Alaska Fairbanks. 
 
 keywords:
-  - one
-  - two
-  - optional
-  - optional
-  - optional
+  - ice-rich permafrost
+  - arctic vegetation
+  - prudhoe bay, alaska
 
 ## must be one of: pnasresearcharticle (usual two-column layout), pnasmathematics (one column layout), or pnasinvited (invited submissions only)
 pnas_type: pnasresearcharticle
@@ -62,34 +73,37 @@ lineno: false
 output: rticles::pnas_article
 ---
 
+Introduction {.numbered}
+========================
+Description of the study area {.numbered}
+------------------------------------
 
-This PNAS journal template is provided to help you write your work in the
-correct journal format. Instructions for use are provided below.
+The 2020 and 2021 field seasons were focused in the Prudhoe Bay Area in the vicinity of Lake Colleen and the Deadhorse Airport  at three already-established IRPS study sites; the Jorgenson Site (JS), Colleen Site (CS), Airport site (AS), and a new Natural Ice-Rich Permafrost Observatory (NIRPO). Figure [fig:Fig1-site-map-deadhorse-area].
 
-Note: please start your introduction without including the word
-"Introduction" as a section heading (except for math articles in the
-Physical Sciences section); this heading is implied in the first
-paragraphs.
+![NNA-IRPS study sites within the Deadhorse area in the eastern portion of the Prudhoe Bay oil field. Note: the boundary of the NIRPO site was modified in 2021.
+<span data-label="fig:Fig1-site-map-deadhorse-area"></span>](figures/Fig1-site-map-deadhorse-area.png)
 
-Guide to using this template {.unnumbered}
-========================================
+The PBO was discovered in 1967 and is now part of the largest industrial complex in the North American Arctic. The region, history, and cumulative impacts of this development have been described in several publications @walker1987jb, @truett2000vl, @nrc2003vy, @raynolds2014fu, @walker2021wv. 
 
-Please note that whilst this template provides a preview of the typeset
-manuscript for submission, to help in this preparation, it will not
-necessarily be the final publication layout. For more detailed
-information please see the [PNAS Information for
-Authors](http://www.pnas.org/site/authors/format.xhtml).
+### Jorgenson Site {.numbered}
+
+The Jorgenson site (JS) was established in 2011 to better understand the processes of ice-wedge degradation and stabilization @Jorgenson2015bg, @Kanevskiy2017eo. The site is relatively isolated from road-related dust and flooding and provides historical information to compare with the heavily disturbed Colleen and Airport sites. Changes to the vegetation and landforms at the JS are mainly those associated with climate change, but there are also impacts that occur nearly every place within the PBO, including trails from past seismic operations, vegetation impacts from atmospheric emissions from industrial activities and low levels of road dust from the PBO road network, and changes in drainage patterns associated with pipelines and roads.
+
+Previous observations (2011–2013) at the JS included measurement of ground elevations, thaw depths, water depths, and snow along the 0–250-m section of the 350-m transect shown in Figure 3. This section was revisited in 2020 for repeat measurements of thaw and water depths and other measurements discussed below.  
+
+![The Jorgenson site in 1968 and 2012, The 350-m transect (white line) was the focus of intensive landscape and permafrost studies described in Jorgenson et al. (2015) and Kanevskiy et al. (2017) and measurements of thaw, water depth, and plant community transitions in 2020 (this report).
+<span data-label="fig:jorgenson-site-1968"></span>](figures/jorgenson-site-1968.jpg)
 
 
-Author Affiliations {#author-affiliations .unnumbered}
--------------------
+Author Affiliations {#author-affiliations .numbered}
+===================
 
 Include department, institution, and complete address, with the
 ZIP/postal code, for each author. Use lower case letters to match
 authors with institutions, as shown in the example. Authors with an
 ORCID ID may supply this information at submission.
 
-Submitting Manuscripts {#submitting-manuscripts .unnumbered}
+Submitting Manuscripts {#submitting-manuscripts .numbered}
 ----------------------
 
 All authors must submit their articles at
@@ -106,7 +120,7 @@ Abstract, Significance Statement, Results, Discussion, Materials and
 methods, Acknowledgments, and References. Other orders and headings are
 permitted.
 
-Manuscript Length {#manuscript-length .unnumbered}
+Manuscript Length {#manuscript-length .numbered}
 -----------------
 
 PNAS generally uses a two-column format averaging 67 characters,
@@ -118,95 +132,8 @@ and/or equations in addition to text, keep the text for your manuscript
 under 39,000 characters (including spaces) for Direct Submissions and
 72,000 characters (including spaces) for PNAS PLUS.
 
-References {#references .unnumbered}
-----------
 
-References should be cited in numerical order as they appear in text;
-this will be done automatically via bibtex, e.g. @belkin2002using and
-@berard1994embedding [@coifman2005geometric]. All references, including
-for the SI, should be included in the main manuscript file. References
-appearing in both sections should not be duplicated. SI references
-included in tables should be included with the main reference section.
-
-Data Archival {#data-archival .unnumbered}
--------------
-
-PNAS must be able to archive the data essential to a published article.
-Where such archiving is not possible, deposition of data in public
-databases, such as GenBank, ArrayExpress, Protein Data Bank, Unidata,
-and others outlined in the Information for Authors, is acceptable.
-
-
-
-Language-Editing Services {#language-editing-services .unnumbered}
--------------------------
-
-Prior to submission, authors who believe their manuscripts would benefit
-from professional editing are encouraged to use a language-editing
-service (see list at www.pnas.org/site/authors/language-editing.xhtml).
-PNAS does not take responsibility for or endorse these services, and
-their use has no bearing on acceptance of a manuscript for publication.
-
-![Placeholder image of a frog with a long example caption to show
-justification setting.<span data-label="fig:frog"></span>](frog.png)
-
-Digital Figures {#sec:figures .unnumbered}
----------------
-
-Only TIFF, EPS, and high-resolution PDF for Mac or PC are allowed for
-figures that will appear in the main text, and images must be final
-size. Authors may submit U3D or PRC files for 3D images; these must be
-accompanied by 2D representations in TIFF, EPS, or high-resolution PDF
-format. Color images must be in RGB (red, green, blue) mode. Include the
-font files for any text.
-
-Figures and Tables should be labelled and referenced in the standard way
-using the `\label{}` and `\ref{}` commands.
-
-Figure \[fig:frog\] shows an example of how to insert a column-wide
-figure. To insert a figure wider than one column, please use the
-`\begin{figure*}...\end{figure*}` environment. Figures wider than one
-column should be sized to 11.4 cm or 17.8 cm wide.
-
-Single column equations {#single-column-equations .unnumbered}
------------------------
-
-Authors may use 1- or 2-column equations in their article, according to
-their preference.
-
-To allow an equation to span both columns, options are to use the
-`\begin{figure*}...\end{figure*}` environment mentioned above for
-figures, or to use the `\begin{widetext}...\end{widetext}` environment
-as shown in equation \[eqn:example\] below.
-
-Please note that this option may run into problems with floats and
-footnotes, as mentioned in the [cuted package
-documentation](http://texdoc.net/pkg/cuted). In the case of problems
-with footnotes, it may be possible to correct the situation using
-commands `\footnotemark` and `\footnotetext`.
-
-$$\begin{aligned}
-(x+y)^3&=(x+y)(x+y)^2\\
-       &=(x+y)(x^2+2xy+y^2) \label{eqn:example} \\
-       &=x^3+3x^2y+3xy^3+x^3. 
-\end{aligned}$$
-
-
-
-<!-- pandoc writes all tables using longtable, which fails in 2-column mode
-
-  Species                    CBS     CV     G3
-  ----------------------- ------ ------ ------
-  1\. Acetaldehyde           0.0    0.0    0.0
-  2\. Vinyl alcohol          9.1    9.6   13.5
-  3\. Hydroxyethylidene     50.8   51.2   54.0
-
-  : Comparison of the fitted potential energy surfaces and ab initio
-  benchmark electronic energy calculations
-
--->
-
-Supporting Information (SI) {#supporting-information-si .unnumbered}
+Supporting Information (SI) {#supporting-information-si .numbered}
 ---------------------------
 
 
@@ -222,12 +149,12 @@ technique, then the methods must be described completely in the main
 text. Because PNAS edits SI and composes it into a single PDF, authors
 must provide the following file formats only.
 
-### SI Text {#si-text .unnumbered}
+### SI Text {#si-text .numbered}
 
 Supply Word, RTF, or LaTeX files (LaTeX files must be accompanied by a
 PDF with the same file name for visual reference).
 
-### SI Figures {#si-figures .unnumbered}
+### SI Figures {#si-figures .numbered}
 
 Provide a brief legend for each supporting figure after the supporting
 text. Provide figure images in TIFF, EPS, high-resolution PDF, JPEG, or
@@ -236,25 +163,25 @@ TIFF files, use only LZW compression; do not use JPEG compression. Do
 not save figure numbers, legends, or author names as part of the image.
 Composite figures must be pre-assembled.
 
-### 3D Figures {#d-figures .unnumbered}
+### 3D Figures {#d-figures .numbered}
 
 Supply a composable U3D or PRC file so that it may be edited and
 composed. Authors may submit a PDF file but please note it will be
 published in raw format and will not be edited or composed.
 
-### SI Tables {#si-tables .unnumbered}
+### SI Tables {#si-tables .numbered}
 
 Supply Word, RTF, or LaTeX files (LaTeX files must be accompanied by a
 PDF with the same file name for visual reference); include only one
 table per file. Do not use tabs or spaces to separate columns in Word
 tables.
 
-### SI Datasets {#si-datasets .unnumbered}
+### SI Datasets {#si-datasets .numbered}
 
 Supply Excel (.xls), RTF, or PDF files. This file type will be published
 in raw format and will not be edited or composed.
 
-### SI Movies {#si-movies .unnumbered}
+### SI Movies {#si-movies .numbered}
 
 Supply Audio Video Interleave (avi), Quicktime (mov), Windows Media
 (wmv), animated GIF (gif), or MPEG files and submit a brief legend for
@@ -262,12 +189,12 @@ each movie in a Word or RTF file. All movies should be submitted at the
 desired reproduction size and length. Movies should be no more than 10
 MB in size.
 
-### Still images {#still-images .unnumbered}
+### Still images {#still-images .numbered}
 
 Authors must provide a still image from each video file. Supply TIFF,
 EPS, high-resolution PDF, JPEG, or GIF files.
 
-### Appendices {#appendices .unnumbered}
+### Appendices {#appendices .numbered}
 
 PNAS prefers that authors submit individual source files to ensure
 readability. If this is not possible, supply a single PDF file that
