@@ -3,8 +3,8 @@ title: "iButton Temperature Data from 40 Aquatic Vegetation Plots in Prudhoe Bay
 author: "Emily Watson-Cook, Jana Peirce"
 date: "19 February 2022"
 output:
-  pdf_document: default
   word_document: default
+  pdf_document: default
   html_document: default
 ---
 ```{r setup, include=FALSE}
