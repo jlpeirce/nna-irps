@@ -1,0 +1,84 @@
+﻿Plot ID,Vegetation type code,Microrelief,Habitat type code,Field name (description) of plant community
+21-01,M2,F,5.06.1.2,"Wet Eriophorum angustifolium, Carex aquatilis, Drepanocladus brevifolius graminoid, moss tundra"
+21-02,M2,F,5.06.1.2,"Wet Carex aquatilis, Drepanocladus brevifolius graminoid, moss tundra"
+21-03,M4,F,5.06.1.2,"Wet Eriophorum angustifolium, Scorpidium scorpioides graminoid, moss tundra"
+21-04,M4,F,5.06.1.2,"Wet Eriophorum angustifolium, Scorpidium scorpioides graminoid, moss tundra"
+21-05,U3,HC,1.02.2,"Moist Eriophorum triste, Dryas integrifolium, Tomentypnum nitens, Thamnolia  subuliformis graminoid, prostrate dwarf-shrub, moss, lichen tundra"
+21-06,U3,HC,1.02.2,"Moist Eriophorum triste, Dryas integrifolium, Tomentypnum nitens, Thamnolia  subuliformis graminoid, prostrate dwarf-shrub, moss, lichen tundra"
+21-07,U4,HC,1.02.2,"Moist Eriophorum triste, Dryas integrifolium, Tomentypnum nitens, graminoid, prostrate dwarf-shrub, moss tundra"
+21-08,U4,HC,1.02.2,"Moist Eriophorum triste, Salix lanata, Drepanocladus brevifolius, graminoid, dwarf-shrub, moss tundra"
+21-09,U4,HC,1.02.2,"Moist Eriophorum triste, Salix lanata, Tomentypnum nitesns, graminoid, dwarf-shrub, moss tundra"
+21-10,U3,HC,NA,"Moist Eriophorum triste, Dryas integrifolium, Tomentypnum nitens, Thamnolia  subuliformis graminoid, prostrate dwarf-shrub, moss, lichen tundra"
+21-11,M2,T,5.06.1.2,"Wet Eriophorum angustifolium, Salix arctica, Drepanocladus brevifolius sedge, moss tundra"
+21-12,U4,T,1.02.2,"Moist Eriophorum triste, Salix lanata, Hamatocaulis vernicosus, graminoid, dwarf-shrub, moss tundra"
+21-13,U4,T,5.06.1.2,"Moist Eriophorum angustifolium, Carex membranacea, Salix arctica, Drepanocladus brevifolius sedge, moss tundra"
+21-14,M2,T,5.06.1.2,"Wet Eriophorum angustifolium, Dupontia fisheri, Drepanocladus brevifolius graminoid, moss tundra"
+21-15,U4,T,1.02.2,"Moist Eriophorum triste, Salix arctica, Tomentypnum nitens, graminoid, dwarf-shrub, moss tundra"
+21-16,M2,T,5.06.1.2,"Wet Eriophorum angustifolium, Salix arctica,  Drepanocladus brevifolius graminoid, moss tundra"
+21-17,U4,S,1.02.2,"Moist Carex aquatilis, Eriophorum triste, Salix arctica, Tomentypnum nitens  graminoid, dwarf-shrub, moss tundra"
+21-18,U4,S,1.02.2,"Moist Carex aquatilis, Eriophorum triste, Dryas integrifolia, Drepanocladus brevifolius  graminoid, dwarf-shrub, moss tundra"
+21-19,M2,HC,5.06.1.2,"Wet Eriophorum angustifolium,  Drepanocladus brevifolius graminoid, moss tundra"
+21-20,U3,HC,1.02.2,"Moist Carex membranacea, Dryas integrifolia, Tomentypnum nitens, Thamnolia subuliformis graminoid, prostrate dwarf-shrub, moss, lichen tundra"
+21-21,U3,HC,1.02.2,"Moist Dryas integrifolia, Carex membranacea,  Tomentypnum nitens, Thamnolia subuliformis prostrate dwarf-shrub,  graminoid, moss, lichen tundra"
+21-22,U3,HC,1.02.2,"Moist Eriophorum triste, Dryas integrifolia, Tomentypnum nitens, Thamnolia subuliformis graminoid, prostrate dwarf-shrub, moss, lichen tundra"
+21-23,M2,HC,5.06.1.2,"Wet Eriophorum angustifolium,  Drepanocladus brevifolius graminoid, moss tundra"
+21-24,U3,S,1.02.2,"Moist Eriophorum triste, Dryas integrifolia,   Tomentypnum nitens, Thamnolia subuliformis graminoid, prostrate dwarf-shrub, moss, lichen tundra"
+21-25,M4-MARL,P,5.06.1.1,Aquatic Carex aquatilis marl tundra
+21-26,M4-MARL,P,5.06.1.1,Aquatic Carex aquatilis marl tundra
+21-27,M2,LC,5.06.1.2,"Wet Eriophorum angustifolium,  Drepanocladus brevifolius graminoid, moss tundra"
+21-28,M4,T,5.06.1.2,"Aquatic Eriophorum angustifolium, Carex aquatilis, Scorpidium scropioides  graminoid, moss tundra"
+21-29,M2,LC,5.06.1.2,"Wet Eriophorum angustifolium, Carex aquatilis, Drepanocladus brevifolius  graminoid, moss tundra"
+21-30,U4,LC,1.02.2,"Moist Eriophorum triste, Salix reticulata, Dryas integrifolia, Tomentypnum nitens,  graminoid, prostrate dwarf-shrub, moss tundra"
+21-31,M4/E1,T,5.06.1.2,"Aquatic  Carex aquatilis, Calliergon giganteum graminoid, moss tundra"
+21-32,M4,T,5.06.1.2,"Aquatic  Carex aquatilis, Drepanocladus sp. graminoid, moss tundra"
+21-33,M4,LC,5.06.1.2,"Aquatic  Carex aquatilis, Eriophorum angustifolium, Drepanocladus brevifolius, Scorpidium scorpioides  graminoid, moss tundra"
+21-34,U4,LC,1.02.2,"Moist Eriophorum triste, Salix reticulata, Dryas integrifolia, Tomentypnum nitens,  graminoid, prostrate dwarf-shrub, moss tundra"
+21-35,M4/E1,T,5.06.1.2,"Aquatic  Carex aquatilis, Calliergon giganteum graminoid, moss tundra"
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+Column headings: ,,,,
+"Vegetation type: Modified from Walker 1980, 1985; Watson-Cook 2022. See Table A4.7 for descriptions. Habitat type: After Mucina et al. 2014. See Table A4.6 for descriptions. Microrelief: See Table A4.7 for definitions. ",,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
