@@ -30,13 +30,13 @@
 # The Java OneWireViewer app can also be downloaded and used to verify that your
 # drivers work and that you can communicate with iButtons successfully through 
 # the USB adapter. You can download this app here: 
-# http://www.maxim-ic.com/products/ibutton/software/1wire/OneWireViewer.cfm
+# http://www.maxim-ic.com/produgcts/ibutton/software/1wire/OneWireViewer.cfm
 
 
 # NOTE: the Maxim program "thermodl.exe" must be present in the current R 
 # working directory. Uncomment the setwd() line below to change the R working 
 # directory. Enter your working directory location inside the quotes.
-# setwd('D:/R/ibuttons') 
+setwd('C:/Users/jlpeirce/OneDrive - University of Alaska/R for UAF AGC/nna-irps') 
 
 cur.date = Sys.Date() # Get current date
 # Assemble a directory name to store raw downloaded data into
