@@ -1,8 +1,44 @@
 ---
-title: "Test iButtons2023 Repository"
+title: "iButton Temperature Data from 2021-2023 NIRPO Plots in Prudhoe Bay, Alaska"
 author: "Jana Peirce"
-date: "9/20/2023"
-output: html_document
+date: "6 November 2023"
+output:
+  pdf_document: default
+  word_document: default
+  html_document: default
 ---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+```{r message = FALSE}
+library(dplyr)
+library(tidyr)
+library(readr)
+library(ggplot2)
+library(scales)
+library(here)
+library(stringr)
+library(tinytex)
+library(readxl)
+
+```
+
 
 ## see ibutton dowload scripts at https://lukemiller.org/index.php/2012/07/r-scripts-for-downloading-ibutton-thermochron-dataloggers/
+
+```{r}
+#read in ibutton temp data from 1922L sensors
+
+excel_file <- "data/Trimmed1922L.xlsx")
+sheets <- excel_sheets(excel_file)
+for (sheet in sheets) {
+  df <- read_excel(excel_file, sheet = sheet)
+   # Specify the output file path for each sheet
+  output_file <- paste0(sheet, ".csv")
+  
+  # Write the data frame to a CSV file
+  write.csv(df, file = output_file, row.names = FALSE)
+}
+
+```
