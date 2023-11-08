@@ -25,7 +25,7 @@ library(readxl)
 ```
 
 
-## see ibutton dowload scripts at https://lukemiller.org/index.php/2012/07/r-scripts-for-downloading-ibutton-thermochron-dataloggers/
+## deleted comment in rstudio
 
 ```{r}
 #read in ibutton temp data from 1922L sensors
