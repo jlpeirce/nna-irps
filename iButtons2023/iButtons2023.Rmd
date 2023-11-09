@@ -28,9 +28,9 @@ library(readxl)
 ## deleted comment in rstudio
 
 ```{r}
-#read in ibutton temp data from 1922L sensors
+# read in ibutton data from 1922L sensors
 
-excel_file <- "data/Trimmed1922L.xlsx")
+excel_file <- "data/Trimmed1922L.xlsx"
 sheets <- excel_sheets(excel_file)
 for (sheet in sheets) {
   df <- read_excel(excel_file, sheet = sheet)
