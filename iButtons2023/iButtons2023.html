@@ -371,7 +371,19 @@ for (sheet in sheets) {
   write.csv(df, file = output_file, row.names = FALSE)
 })
 </pre>
-<p>Read in All Data in data folder</p>
+<div id="read-in-all-ibtn-temp-data-in-from-folder" class="section level3">
+<h3>Read in All iBtn temp data in from folder</h3>
+<pre class="r"><code># Set the directory where your CSV files are located
+setwd(&quot;data/temps&quot;)
+
+# Get a list of all the CSV files in the directory
+csv_files &lt;- list.files(pattern = &quot;*.csv&quot;)
+
+# Read all the CSV files into a list of data frames
+ibtn_temps &lt;- lapply(csv_files, function(file) {
+  read.csv(file)
+})</code></pre>
+</div>
 
 
 

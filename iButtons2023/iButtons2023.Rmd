@@ -3,9 +3,9 @@ title: "iButton Temperature Data from 2021-2023 NIRPO Plots in Prudhoe Bay, Alas
 author: "Jana Peirce"
 date: "6 November 2023"
 output:
-  pdf_document: default
-  word_document: default
   html_document: default
+  word_document: default
+  pdf_document: default
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
@@ -24,11 +24,10 @@ library(readxl)
 
 ```
 
+### Code used 1x to split xlsx file with cleaned iBtn data into separate csv files 
 
-## deleted comment in rstudio
-
-```{r}
-# read in ibutton data from 1922L sensors
+<pre>
+# DO NOT READ IN XLSX files as csv if they have date or time fields to avoid issues
 
 excel_file <- "data/Trimmed1922L.xlsx"
 sheets <- excel_sheets(excel_file)
@@ -39,6 +38,102 @@ for (sheet in sheets) {
   
   # Write the data frame to a CSV file
   write.csv(df, file = output_file, row.names = FALSE)
-}
+})
+</pre>
+
+### Read in all csv files in data/temps/ folder
+
+```{r echo=TRUE}
+
+# Set the directory where your CSV files are located
+setwd("data/temps")
+
+# Get a list of all the CSV files in the directory
+csv_files <- list.files(pattern = "*.csv")
+
+# Read all the CSV files into a list of data frames
+ibtn_temps <- lapply(csv_files, function(file) {
+  read.csv(file)
+})
 
 ```
+ 
+## Need to separate all tabs into csv before bringing into r
+
+```{r}
+
+library(lubridate)
+library(hms)
+
+# Read the CSV file
+datanewT02 <- read.csv("data/temps/T02formatted.csv")
+
+```
+
+## Need to convert all times in csv to yyyy-mm-dd before bringing into r
+
+```{r}
+
+# convert date col from char to date format
+date_datanewT02 <- data.frame(datanewT02)
+date_datanewT02$Date <- as.Date(date_datanewT02$Date)
+
+# view output
+head(date_datanewT02)
+```
+
+```{r}
+
+# This doesn't alter the data frame but creates value object in correct format /// TRY POSIXlt?
+
+datetime_datanewT02 <- as.POSIXct(date_datanewT02$Time,
+                            format="%I:%M %p"
+                            )
+
+# view output
+head(datetime_datanewT02)
+
+```
+```{r}
+class(datetime_datanewT02)
+```
+
+```{r}
+# Step 1: converted column of data to POSIXct format from character format
+
+date_datanewT02$Time <- as.POSIXct(date_datanewT02$Time,
+                                   format = "%I:%M %p" #format time
+                                   )
+str(date_datanewT02$Time, format = "%H:%M:%S")
+
+class(date_datanewT02$Time)
+
+```
+
+
+```{r}
+# view output
+head(date_datanewT02)
+
+```
+```{r}
+
+good_datanewT02 <- strptime(myDateTime, format="%d/%m/%Y %H:%M:%S")
+
+format(x, "%H:%M:%S")
+
+```
+```{r}
+
+# This works but we are back to the beginning with the time column as a chr string
+
+# Example data frame with a datetime column in POSIXct format
+good_datanewT02 <- data.frame(date_datanewT02)
+
+# Extracting time from datetime
+good_datanewT02$Time <- format(df$Time, format = "%H:%M:%S")
+
+head(good_datanewT02)
+
+```
+
