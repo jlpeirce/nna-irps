@@ -3,8 +3,8 @@ title: "iButton Temperature Data from 2021-2023 NIRPO Plots in Prudhoe Bay, Alas
 author: "Jana Peirce"
 date: "6 November 2023"
 output:
-  html_document: default
   word_document: default
+  html_document: default
   pdf_document: default
 ---
 ```{r setup, include=FALSE}

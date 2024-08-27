@@ -1,184 +1,184 @@
-﻿iBtn_ID,Plot_ID,Plot_type,Transect,Mission,Depth,Location,Status
-L13,21A-02,Aquatic,JS,2021,0,surface,
-L17,21A-03,Aquatic,JS,2021,0,surface,
-L15,21A-04,Aquatic,JS,2021,0,surface,
-L14,21A-09,Aquatic,JS,2021,0,surface,
-L16,21A-13,Aquatic,JS,2021,0,surface,
-L20,21A-14,Aquatic,JS,2021,0,surface,
-L12,21A-15,Aquatic,JS,2021,0,surface,
-L19,21A-16,Aquatic,JS,2021,0,surface,
-L11,21A-18,Aquatic,JS,2021,0,surface,
-L18,21A-19,Aquatic,JS,2021,0,surface,
-T58,21-05,Terrestrial,T6,2021,0,surface, 
-T60,21-05,Terrestrial,T6,2021,-10,base org layer,"Serial no. is for T60, not T16"
-T22,21-06,Terrestrial,T6,2021,-10,base org layer, 
-T43,21-06,Terrestrial,T6,2021,0,surface,
-T51,21-07,Terrestrial,T6,2021,-12,base org layer, 
-T59,21-07,Terrestrial,T6,2021,0,surface,
-T47,21-08,Terrestrial,T6,2021,-20,base org layer,
-T55,21-08,Terrestrial,T6,2021,0,surface,
-T12,21-09,Terrestrial,T6,2021,-14,base org layer,
-T23,21-09,Terrestrial,T6,2021,0,surface,
-T27,21-10,Terrestrial,T6,2021,-19,base org layer,
-T42,21-10,Terrestrial,T6,2021,0,surface,
-T49,21-11,Terrestrial,T6,2021,0,surface, 
-T52,21-11,Terrestrial,T6,2021,-17,base org layer,
-T31,21-12,Terrestrial,T6,2021,-11,base org layer,
-T33,21-12,Terrestrial,T6,2021,0,surface,
-T45,21-13,Terrestrial,T6,2021,-20,base org layer,Lost
-T54,21-13,Terrestrial,T6,2021,0,surface,Lost
-T44,21-14,Terrestrial,T6,2021,-19,base org layer, 
-T46,21-14,Terrestrial,T6,2021,0,surface,
-T37,21-15,Terrestrial,T6,2021,-20,base org layer,
-T48,21-15,Terrestrial,T6,2021,0,surface,
-T41,21-16,Terrestrial,T6,2021,-23,base org layer,
-T50,21-16,Terrestrial,T6,2021,0,surface,Dead
-L03,21A-21,Aquatic,T6,2021,0,surface,
-L06,21A-22,Aquatic,T6,2021,0,surface,
-L04,21A-23,Aquatic,T6,2021,0,surface,
-L10,21A-24,Aquatic,T6,2021,0,surface,
-L02,21A-26,Aquatic,T6,2021,0,surface,
-L09,21A-27,Aquatic,T6,2021,0,surface,
-L07,21A-28,Aquatic,T6,2021,0,surface,
-L01,21A-34,Aquatic,T6,2021,0,surface,
-L08,21A-35,Aquatic,T6,2021,0,surface,
-L05,21A-37,Aquatic,T6,2021,0,surface,
-T04,21-25,Terrestrial,T7,2021,0,surface,
-T40,21-25,Terrestrial,T7,2021,-20,base org layer,
-T03,21-26,Terrestrial,T7,2021,0,surface,
-T39,21-26,Terrestrial,T7,2021,-20,base org layer,
-T21,21-27,Terrestrial,T7,2021,0,surface, 
-T56,21-27,Terrestrial,T7,2021,-26,base org layer,
-T01,21-28,Terrestrial,T7,2021,0,surface, 
-T35,21-28,Terrestrial,T7,2021,-40,base org layer,
-T05,21-31b,Terrestrial,T7,2021,0,surface, 
-T15,21-31b,Terrestrial,T7,2021,-20,base org layer,
-T16,21-35,Terrestrial,T7,2021,0,surface,"Serial no. is for T16, not T60"
-T34,21-35,Terrestrial,T7,2021,-20,base org layer,
-T13,21-01,Terrestrial,T8,2021,0,surface,
-T57,21-01,Terrestrial,T8,2021,-24,base org layer,
-T08,21-02,Terrestrial,T8,2021,0,surface,
-T29,21-02,Terrestrial,T8,2021,-25,base org layer,
-T28,21-03,Terrestrial,T8,2021,-25,base org layer,
-T30,21-03,Terrestrial,T8,2021,0,surface,
-T07,21-04,Terrestrial,T8,2021,0,surface,Dead
-T36,21-04,Terrestrial,T8,2021,-21,base org layer, 
-T19,21-17,Terrestrial,T8,2021,-23,base org layer,
-T20,21-17,Terrestrial,T8,2021,0,surface,
-T06,21-18,Terrestrial,T8,2021,-20,base org layer,
-T53,21-18,Terrestrial,T8,2021,0,surface,
-T25,21-19,Terrestrial,T9,2021,-19,base org layer,
-T32,21-19,Terrestrial,T9,2021,0,surface,
-T14,21-20,Terrestrial,T9,2021,0,surface,
-T24,21-20,Terrestrial,T9,2021,-19,base org layer,
-T09,21-21,Terrestrial,T9,2021,0,surface,
-T26,21-21,Terrestrial,T9,2021,-20,base org layer,
-T02,21-22,Terrestrial,T9,2021,-23,base org layer,Depth assumed based on A horizon
-T17,21-22,Terrestrial,T9,2021,0,surface,
-T18,21-23,Terrestrial,T9,2021,-20,base org layer,
-T38,21-23,Terrestrial,T9,2021,0,surface, 
-T10,21-24,Terrestrial,T9,2021,-26,base org layer,Check iBtn ID
-T11,21-24,Terrestrial,T9,2021,0,surface,
-167,22-08,Aquatic,Lakes,2022,-15,-15,
-230,22-08,Aquatic,Lakes,2022,0,surface,
-267,22-08,Aquatic,Lakes,2022,-40,-40,
-168,22-09,Aquatic,Lakes,2022,-15,-15,
-204,22-09,Aquatic,Lakes,2022,-40,-40,
-240,22-09,Aquatic,Lakes,2022,0,surface,
-170,22-11,Aquatic,Lakes,2022,-15,-15,
-217,22-11,Aquatic,Lakes,2022,-40,-40,
-245,22-11,Aquatic,Lakes,2022,0,surface,
-182,22-12,Aquatic,Lakes,2022,-15,-15,
-220,22-12,Aquatic,Lakes,2022,-40,-40,
-268,22-12,Aquatic,Lakes,2022,0,surface,
-165,22-01,Terrestrial,Pingo,2022,-15,-15,
-235,22-01,Terrestrial,Pingo,2022,-40,-40,
-246,22-01,Terrestrial,Pingo,2022,0,surface,
-173,22-02,Terrestrial,Pingo,2022,-15,-15,
-203,22-02,Terrestrial,Pingo,2022,0,surface,
-257,22-02,Terrestrial,Pingo,2022,-40,-40,
-188,22-04,Terrestrial,Pingo,2022,-15,-15,
-218,22-04,Terrestrial,Pingo,2022,-40,-40,
-228,22-04,Terrestrial,Pingo,2022,0,surface,
-135,22-05,Terrestrial,Pingo,2022,-15,-15,
-229,22-05,Terrestrial,Pingo,2022,100,air,
-232,22-05,Terrestrial,Pingo,2022,0,surface,
-237,22-05,Terrestrial,Pingo,2022,-40,-40,
-176,22-13,Terrestrial,Pingo,2022,0,surface,
-185,22-13,Terrestrial,Pingo,2022,-15,-15,
-223,22-13,Terrestrial,Pingo,2022,-40,-40,
-225,22-13,Terrestrial,Pingo,2022,100,air,
-149,22-14,Terrestrial,Pingo,2022,0,surface,
-186,22-14,Terrestrial,Pingo,2022,-15,-15,
-252,22-14,Terrestrial,Pingo,2022,-40,-40,
-125,21-05,Terrestrial,T6,2022,-15,-15,
-136,21-05,Terrestrial,T6,2022,-40,-40,
-239,21-05,Terrestrial,T6,2022,0,surface,Errors Jan-Feb data
-129,21-09,Terrestrial,T6,2022,-15,-15,
-142,21-09,Terrestrial,T6,2022,-40,-40,
-177,21-09,Terrestrial,T6,2022,0,surface,
-120,21-11,Terrestrial,T6,2022,-15,-15,
-181,21-11,Terrestrial,T6,2022,-40,-40,
-209,21-11,Terrestrial,T6,2022,0,surface,
-127,21-16,Terrestrial,T6,2022,-15,-15,
-152,21-16,Terrestrial,T6,2022,-40,-40,
-261,21-16,Terrestrial,T6,2022,0,surface,
-117,21-28,Terrestrial,T7,2022,-15,-15,
-160,21-28,Terrestrial,T7,2022,-40,-40,
-180,21-28,Terrestrial,T7,2022,0,surface,
-110,21-29,Terrestrial,T7,2022,-15,-15,
-111,21-29,Terrestrial,T7,2022,0,surface,
-130,21-29,Terrestrial,T7,2022,-40,-40,
-141,21-31,Terrestrial,T7,2022,-15,-15,
-172,21-31,Terrestrial,T7,2022,-40,-40,
-227,21-31,Terrestrial,T7,2022,0,surface,
-108,21-34,Terrestrial,T7,2022,-15,-15,
-122,21-34,Terrestrial,T7,2022,0,surface,
-158,21-34,Terrestrial,T7,2022,-40,-40,
-112,21-35,Terrestrial,T7,2022,-15,-15,
-146,21-35,Terrestrial,T7,2022,0,surface,
-163,21-35,Terrestrial,T7,2022,-40,-40,
-144,21-01,Terrestrial,T8,2022,0,surface,
-194,21-01,Terrestrial,T8,2022,-15,-15,
-259,21-01,Terrestrial,T8,2022,-40,-40,
-166,21-02,Terrestrial,T8,2022,0,surface,
-190,21-02,Terrestrial,T8,2022,-15,-15,
-265,21-02,Terrestrial,T8,2022,-40,-40,
-105,21-03,Terrestrial,T8,2022,-15,-15,
-192,21-03,Terrestrial,T8,2022,0,surface,
-273,21-03,Terrestrial,T8,2022,-40,-40,
-103,21-04,Terrestrial,T8,2022,-15,-15,Depth
-196,21-04,Terrestrial,T8,2022,0,surface,
-253,21-04,Terrestrial,T8,2022,-40,-40,Depth
-119,21-17,Terrestrial,T8,2022,-15,-15,
-199,21-17,Terrestrial,T8,2022,0,surface,
-272,21-17,Terrestrial,T8,2022,-40,-40,
-161,22-15,Terrestrial,T8,2022,0,surface,
-187,22-15,Terrestrial,T8,2022,-15,-15,
-256,22-15,Terrestrial,T8,2022,-40,-40,
-169,21-21,Terrestrial,T9,2022,-15,-15,Depth discrepancy - check
-210,21-21,Terrestrial,T9,2022,-40,-40,Depth discrepancy - check
-242,21-21,Terrestrial,T9,2022,0,surface,
-126,21-23,Terrestrial,T9,2022,-15,-15,
-175,21-23,Terrestrial,T9,2022,0,surface,
-178,21-23,Terrestrial,T9,2022,-40,-40,
-207,21A-02,Aquatic,T6,2022,-40,-40,Depth discrepancy - check
-184,21A-02,Aquatic,T6,2022,-15,-15,Depth discrepancy - check
-222,21A-02,Aquatic,T6,2022,0,surface,
-174,21A-03,Aquatic,T6,2022,-40,-40,
-97,21A-03,Aquatic,T6,2022,-15,-15,
-241,21A-03,Aquatic,T6,2022,0,surface,
-153,21A-14,Aquatic,T6,2022,-40,-40,
-145,21A-15,Aquatic,T6,2022,-40,-40,
-200,21A-15,Aquatic,T6,2022,-15,-15,
-215,21A-15,Aquatic,T6,2022,0,surface,
-134,21A-18,Aquatic,T6,2022,-40,-40,
-155,21A-18,Aquatic,T6,2022,-15,-15,
-263,21A-18,Aquatic,T6,2022,0,surface,
-254,21A-26,Aquatic,T6,2022,-40,-40,Depth discrepancy - check
-157,21A-26,Aquatic,T6,2022,-15,-15,Depth discrepancy - check
-264,21A-26,Aquatic,T6,2022,0,surface,
-138,21A-27,Aquatic,T6,2022,-40,-40,
-244,21A-28,Aquatic,T6,2022,-40,-40,Depth discrepancy - check
-147,21A-28,Aquatic,T6,2022,-15,-15,Depth and serial no. discrepancy - check
-248,21A-28,Aquatic,T6,2022,0,surface,
+﻿iBtn_ID,Plot_ID,Plot_type,Transect,Mission,Depth,Location
+L13,21A-02,Aquatic,JS,2021,0,surface
+L17,21A-03,Aquatic,JS,2021,0,surface
+L15,21A-04,Aquatic,JS,2021,0,surface
+L14,21A-09,Aquatic,JS,2021,0,surface
+L16,21A-13,Aquatic,JS,2021,0,surface
+L20,21A-14,Aquatic,JS,2021,0,surface
+L12,21A-15,Aquatic,JS,2021,0,surface
+L19,21A-16,Aquatic,JS,2021,0,surface
+L11,21A-18,Aquatic,JS,2021,0,surface
+L18,21A-19,Aquatic,JS,2021,0,surface
+T58,21-05,Terrestrial,T6,2021,0,surface
+T60,21-05,Terrestrial,T6,2021,-10,base org layer
+T22,21-06,Terrestrial,T6,2021,-10,base org layer
+T43,21-06,Terrestrial,T6,2021,0,surface
+T51,21-07,Terrestrial,T6,2021,-12,base org layer
+T59,21-07,Terrestrial,T6,2021,0,surface
+T47,21-08,Terrestrial,T6,2021,-20,base org layer
+T55,21-08,Terrestrial,T6,2021,0,surface
+T12,21-09,Terrestrial,T6,2021,-14,base org layer
+T23,21-09,Terrestrial,T6,2021,0,surface
+T27,21-10,Terrestrial,T6,2021,-19,base org layer
+T42,21-10,Terrestrial,T6,2021,0,surface
+T49,21-11,Terrestrial,T6,2021,0,surface
+T52,21-11,Terrestrial,T6,2021,-17,base org layer
+T31,21-12,Terrestrial,T6,2021,-11,base org layer
+T33,21-12,Terrestrial,T6,2021,0,surface
+T45,21-13,Terrestrial,T6,2021,-20,base org layer
+T54,21-13,Terrestrial,T6,2021,0,surface
+T44,21-14,Terrestrial,T6,2021,-19,base org layer
+T46,21-14,Terrestrial,T6,2021,0,surface
+T37,21-15,Terrestrial,T6,2021,-20,base org layer
+T48,21-15,Terrestrial,T6,2021,0,surface
+T41,21-16,Terrestrial,T6,2021,-23,base org layer
+T50,21-16,Terrestrial,T6,2021,0,surface
+L03,21A-21,Aquatic,T6,2021,0,surface
+L06,21A-22,Aquatic,T6,2021,0,surface
+L04,21A-23,Aquatic,T6,2021,0,surface
+L10,21A-24,Aquatic,T6,2021,0,surface
+L02,21A-26,Aquatic,T6,2021,0,surface
+L09,21A-27,Aquatic,T6,2021,0,surface
+L07,21A-28,Aquatic,T6,2021,0,surface
+L01,21A-34,Aquatic,T6,2021,0,surface
+L08,21A-35,Aquatic,T6,2021,0,surface
+L05,21A-37,Aquatic,T6,2021,0,surface
+T04,21-25,Terrestrial,T7,2021,0,surface
+T40,21-25,Terrestrial,T7,2021,-20,base org layer
+T03,21-26,Terrestrial,T7,2021,0,surface
+T39,21-26,Terrestrial,T7,2021,-20,base org layer
+T21,21-27,Terrestrial,T7,2021,0,surface
+T56,21-27,Terrestrial,T7,2021,-26,base org layer
+T01,21-28,Terrestrial,T7,2021,0,surface
+T35,21-28,Terrestrial,T7,2021,-40,base org layer
+T05,21-31b,Terrestrial,T7,2021,0,surface
+T15,21-31b,Terrestrial,T7,2021,-20,base org layer
+T16,21-35,Terrestrial,T7,2021,0,surface
+T34,21-35,Terrestrial,T7,2021,-20,base org layer
+T13,21-01,Terrestrial,T8,2021,0,surface
+T57,21-01,Terrestrial,T8,2021,-24,base org layer
+T08,21-02,Terrestrial,T8,2021,0,surface
+T29,21-02,Terrestrial,T8,2021,-25,base org layer
+T28,21-03,Terrestrial,T8,2021,-25,base org layer
+T30,21-03,Terrestrial,T8,2021,0,surface
+T07,21-04,Terrestrial,T8,2021,0,surface
+T36,21-04,Terrestrial,T8,2021,-21,base org layer
+T19,21-17,Terrestrial,T8,2021,-23,base org layer
+T20,21-17,Terrestrial,T8,2021,0,surface
+T06,21-18,Terrestrial,T8,2021,-20,base org layer
+T53,21-18,Terrestrial,T8,2021,0,surface
+T25,21-19,Terrestrial,T9,2021,-19,base org layer
+T32,21-19,Terrestrial,T9,2021,0,surface
+T14,21-20,Terrestrial,T9,2021,0,surface
+T24,21-20,Terrestrial,T9,2021,-19,base org layer
+T09,21-21,Terrestrial,T9,2021,0,surface
+T26,21-21,Terrestrial,T9,2021,-20,base org layer
+T02,21-22,Terrestrial,T9,2021,-23,base org layer
+T17,21-22,Terrestrial,T9,2021,0,surface
+T18,21-23,Terrestrial,T9,2021,-20,base org layer
+T38,21-23,Terrestrial,T9,2021,0,surface
+T10,21-24,Terrestrial,T9,2021,-26,base org layer
+T11,21-24,Terrestrial,T9,2021,0,surface
+167,22-08,Aquatic,Lakes,2022,-15,-15
+230,22-08,Aquatic,Lakes,2022,0,surface
+267,22-08,Aquatic,Lakes,2022,-40,-40
+168,22-09,Aquatic,Lakes,2022,-15,-15
+204,22-09,Aquatic,Lakes,2022,-40,-40
+240,22-09,Aquatic,Lakes,2022,0,surface
+170,22-11,Aquatic,Lakes,2022,-15,-15
+217,22-11,Aquatic,Lakes,2022,-40,-40
+245,22-11,Aquatic,Lakes,2022,0,surface
+182,22-12,Aquatic,Lakes,2022,-15,-15
+220,22-12,Aquatic,Lakes,2022,-40,-40
+268,22-12,Aquatic,Lakes,2022,0,surface
+165,22-01,Terrestrial,Pingo,2022,-15,-15
+235,22-01,Terrestrial,Pingo,2022,-40,-40
+246,22-01,Terrestrial,Pingo,2022,0,surface
+173,22-02,Terrestrial,Pingo,2022,-15,-15
+203,22-02,Terrestrial,Pingo,2022,0,surface
+257,22-02,Terrestrial,Pingo,2022,-40,-40
+188,22-04,Terrestrial,Pingo,2022,-15,-15
+218,22-04,Terrestrial,Pingo,2022,-40,-40
+228,22-04,Terrestrial,Pingo,2022,0,surface
+135,22-05,Terrestrial,Pingo,2022,-15,-15
+229,22-05,Terrestrial,Pingo,2022,100,air
+232,22-05,Terrestrial,Pingo,2022,0,surface
+237,22-05,Terrestrial,Pingo,2022,-40,-40
+176,22-13,Terrestrial,Pingo,2022,0,surface
+185,22-13,Terrestrial,Pingo,2022,-15,-15
+223,22-13,Terrestrial,Pingo,2022,-40,-40
+225,22-13,Terrestrial,Pingo,2022,100,air
+149,22-14,Terrestrial,Pingo,2022,0,surface
+186,22-14,Terrestrial,Pingo,2022,-15,-15
+252,22-14,Terrestrial,Pingo,2022,-40,-40
+125,21-05,Terrestrial,T6,2022,-15,-15
+136,21-05,Terrestrial,T6,2022,-40,-40
+239,21-05,Terrestrial,T6,2022,0,surface
+129,21-09,Terrestrial,T6,2022,-15,-15
+142,21-09,Terrestrial,T6,2022,-40,-40
+177,21-09,Terrestrial,T6,2022,0,surface
+120,21-11,Terrestrial,T6,2022,-15,-15
+181,21-11,Terrestrial,T6,2022,-40,-40
+209,21-11,Terrestrial,T6,2022,0,surface
+127,21-16,Terrestrial,T6,2022,-15,-15
+152,21-16,Terrestrial,T6,2022,-40,-40
+261,21-16,Terrestrial,T6,2022,0,surface
+117,21-28,Terrestrial,T7,2022,-15,-15
+160,21-28,Terrestrial,T7,2022,-40,-40
+180,21-28,Terrestrial,T7,2022,0,surface
+110,21-29,Terrestrial,T7,2022,-15,-15
+111,21-29,Terrestrial,T7,2022,0,surface
+130,21-29,Terrestrial,T7,2022,-40,-40
+141,21-31,Terrestrial,T7,2022,-15,-15
+172,21-31,Terrestrial,T7,2022,-40,-40
+227,21-31,Terrestrial,T7,2022,0,surface
+108,21-34,Terrestrial,T7,2022,-15,-15
+122,21-34,Terrestrial,T7,2022,0,surface
+158,21-34,Terrestrial,T7,2022,-40,-40
+112,21-35,Terrestrial,T7,2022,-15,-15
+146,21-35,Terrestrial,T7,2022,0,surface
+163,21-35,Terrestrial,T7,2022,-40,-40
+144,21-01,Terrestrial,T8,2022,0,surface
+194,21-01,Terrestrial,T8,2022,-15,-15
+259,21-01,Terrestrial,T8,2022,-40,-40
+166,21-02,Terrestrial,T8,2022,0,surface
+190,21-02,Terrestrial,T8,2022,-15,-15
+265,21-02,Terrestrial,T8,2022,-40,-40
+105,21-03,Terrestrial,T8,2022,-15,-15
+192,21-03,Terrestrial,T8,2022,0,surface
+273,21-03,Terrestrial,T8,2022,-40,-40
+103,21-04,Terrestrial,T8,2022,-15,-15
+196,21-04,Terrestrial,T8,2022,0,surface
+253,21-04,Terrestrial,T8,2022,-40,-40
+119,21-17,Terrestrial,T8,2022,-15,-15
+199,21-17,Terrestrial,T8,2022,0,surface
+272,21-17,Terrestrial,T8,2022,-40,-40
+161,22-15,Terrestrial,T8,2022,0,surface
+187,22-15,Terrestrial,T8,2022,-15,-15
+256,22-15,Terrestrial,T8,2022,-40,-40
+169,21-21,Terrestrial,T9,2022,-15,-15
+210,21-21,Terrestrial,T9,2022,-40,-40
+242,21-21,Terrestrial,T9,2022,0,surface
+126,21-23,Terrestrial,T9,2022,-15,-15
+175,21-23,Terrestrial,T9,2022,0,surface
+178,21-23,Terrestrial,T9,2022,-40,-40
+207,21A-02,Aquatic,T6,2022,-40,-40
+184,21A-02,Aquatic,T6,2022,-15,-15
+222,21A-02,Aquatic,T6,2022,0,surface
+174,21A-03,Aquatic,T6,2022,-40,-40
+97,21A-03,Aquatic,T6,2022,-15,-15
+241,21A-03,Aquatic,T6,2022,0,surface
+153,21A-14,Aquatic,T6,2022,-40,-40
+145,21A-15,Aquatic,T6,2022,-40,-40
+200,21A-15,Aquatic,T6,2022,-15,-15
+215,21A-15,Aquatic,T6,2022,0,surface
+134,21A-18,Aquatic,T6,2022,-40,-40
+155,21A-18,Aquatic,T6,2022,-15,-15
+263,21A-18,Aquatic,T6,2022,0,surface
+254,21A-26,Aquatic,T6,2022,-40,-40
+157,21A-26,Aquatic,T6,2022,-15,-15
+264,21A-26,Aquatic,T6,2022,0,surface
+138,21A-27,Aquatic,T6,2022,-40,-40
+244,21A-28,Aquatic,T6,2022,-40,-40
+147,21A-28,Aquatic,T6,2022,-15,-15
+248,21A-28,Aquatic,T6,2022,0,surface
