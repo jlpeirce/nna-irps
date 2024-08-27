@@ -74,7 +74,7 @@ plot_type <- read.csv("data/ibtn_summary.csv")
 
 ```{r}
 
-# join both tables together
+# join both tables together - Not SURE WHY THREE IS AN X IN VARIABLE NAME HERE
 ibtn_summaryX <- left_join(date_temp_long, plot_type, by = c("iBtn_ID")) 
 
 # view output

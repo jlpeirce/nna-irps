@@ -159,7 +159,7 @@ knitr::kable(head(mean_iBtn[, 1:7]), "simple", col.names = c("iBtn ID","Plot ID"
 ```
 
 ```{r}
-write.csv(mean_iBtn2, "data/mean_iBtn.csv")
+write.csv(mean_iBtn, "data/mean_iBtn.csv")
 
 ```
 
