@@ -1,0 +1,151 @@
+Plot_ID,Veg_type,Depth,Transect.x,Moist_grad,avg_daily_temp
+21-01,W1,-40,T8,wet tundra,-6.5451
+21-01,W1,-24,T8,wet tundra,-6.2197
+21-01,W1,-15,T8,wet tundra,-5.7966
+21-01,W1,0,T8,wet tundra,-5.1741
+21-02,W1,-40,T8,wet tundra,-6.3444
+21-02,W1,-25,T8,wet tundra,-5.7971
+21-02,W1,-15,T8,wet tundra,-5.6657
+21-02,W1,0,T8,wet tundra,-4.9078
+21-03,W2,-40,T8,wet tundra,-6.5931
+21-03,W2,-25,T8,wet tundra,-6.2682
+21-03,W2,-15,T8,wet tundra,-5.7343
+21-03,W2,0,T8,wet tundra,-5.5296
+21-04,W2,-40,T8,wet tundra,-6.2691
+21-04,W2,-21,T8,wet tundra,-5.7215
+21-04,W2,-15,T8,wet tundra,-5.7664
+21-04,W2,0,T8,wet tundra,-5.6468
+21-05,M1,-40,T6,moist tundra,-6.624
+21-05,M1,-15,T6,moist tundra,-6.2199
+21-05,M1,-10,T6,moist tundra,-6.1937
+21-05,M1,0,T6,moist tundra,-5.8128
+21-06,M1,-10,T6,moist tundra,-6.7847
+21-06,M1,0,T6,moist tundra,-6.6922
+21-07,M3,-12,T6,moist tundra,-5.9757
+21-07,M3,0,T6,moist tundra,-5.0394
+21-08,M3t,-20,T6,moist tundra,-6.2145
+21-08,M3t,0,T6,moist tundra,-4.6867
+21-09,M3t,-40,T6,moist tundra,-6.2456
+21-09,M3t,-15,T6,moist tundra,-5.6191
+21-09,M3t,-14,T6,moist tundra,-5.9769
+21-09,M3t,0,T6,moist tundra,-4.9406
+21-10,M1,-19,T6,moist tundra,-6.0755
+21-10,M1,0,T6,moist tundra,-5.4271
+21-11,M3t,-40,T6,moist tundra,-5.4659
+21-11,M3t,-17,T6,moist tundra,-4.5352
+21-11,M3t,-15,T6,moist tundra,-4.7179
+21-11,M3t,0,T6,moist tundra,-4.3192
+21-12,W1,-11,T6,wet tundra,-3.8538
+21-12,W1,0,T6,wet tundra,-3.4407
+21-14,W1,-19,T6,wet tundra,-4.6874
+21-14,W1,0,T6,wet tundra,-3.4468
+21-15,M3t,-20,T6,moist tundra,-4.8909
+21-15,M3t,0,T6,moist tundra,-3.9267
+21-16,W1,-40,T6,wet tundra,-5.8221
+21-16,W1,-23,T6,wet tundra,-4.5049
+21-16,W1,-15,T6,wet tundra,-5.0814
+21-16,W1,0,T6,wet tundra,-4.8625
+21-17,M3,-40,T8,moist tundra,-6.6716
+21-17,M3,-23,T8,moist tundra,-5.9796
+21-17,M3,-15,T8,moist tundra,-5.9669
+21-17,M3,0,T8,moist tundra,-5.0445
+21-18,M3,-20,T8,moist tundra,-5.423
+21-18,M3,0,T8,moist tundra,-4.7181
+21-19,W2,-19,T9,wet tundra,-5.3592
+21-20,M1,-19,T9,moist tundra,-6.6025
+21-20,M1,0,T9,moist tundra,-5.8959
+21-21,M1,-40,T9,moist tundra,-7.6385
+21-21,M1,-20,T9,moist tundra,-7.3697
+21-21,M1,-15,T9,moist tundra,-6.8441
+21-21,M1,0,T9,moist tundra,-6.554
+21-22,M1,-23,T9,moist tundra,-5.7446
+21-22,M1,0,T9,moist tundra,-5.5152
+21-23,W1,-40,T9,wet tundra,-5.9593
+21-23,W1,-20,T9,wet tundra,-5.606
+21-23,W1,0,T9,wet tundra,-4.6604
+21-24,M1,-26,T9,moist tundra,-6.046
+21-24,M1,0,T9,moist tundra,-5.6045
+21-25,L2,-20,T7,aquatic,-6.2312
+21-25,L2,0,T7,aquatic,-5.0866
+21-26,L2,-20,T7,aquatic,-5.8428
+21-27,W1,-26,T7,wet tundra,-5.0037
+21-27,W1,0,T7,wet tundra,-4.0786
+21-28,W2,-40,T7,wet tundra,-5.2192
+21-28,W2,-15,T7,wet tundra,-4.8051
+21-28,W2,0,T7,wet tundra,-4.4904
+21-29,W1,-40,T7,wet tundra,-6.4525
+21-29,W1,-15,T7,wet tundra,-5.5321
+21-29,W1,0,T7,wet tundra,-4.9191
+21-31,A1t,-15,T7,aquatic,-6.0324
+21-31,A1t,0,T7,aquatic,-5.4096
+21-34,M3,-40,T7,moist tundra,-6.8946
+21-34,M3,-15,T7,moist tundra,-6.1703
+21-34,M3,0,T7,moist tundra,-5.5365
+21-35,A1t,-40,T7,aquatic,-6.2963
+21-35,A1t,-15,T7,aquatic,-5.3787
+21-35,A1t,0,T7,aquatic,-5.0576
+21A-02,A3t,-40,T6,aquatic,-4.6495
+21A-02,A3t,-15,T6,aquatic,-3.9012
+21A-02,A3t,0,JS,aquatic,-3.027
+21A-02,A3t,0,T6,aquatic,-3.037
+21A-03,A4t,-40,T6,aquatic,-5.2831
+21A-03,A4t,-15,T6,aquatic,-4.0203
+21A-03,A4t,0,JS,aquatic,-3.2896
+21A-04,A3t,0,JS,aquatic,-2.6393
+21A-09,A3t,0,JS,aquatic,-3.7815
+21A-13,A4t,0,JS,aquatic,-2.3675
+21A-14,L3,-40,T6,aquatic,-3.4738
+21A-14,L3,0,JS,aquatic,-2.0186
+21A-15,A3t,-40,T6,aquatic,-2.8895
+21A-15,A3t,-15,T6,aquatic,-2.5081
+21A-15,A3t,0,JS,aquatic,-1.6352
+21A-15,A3t,0,T6,aquatic,-1.7049
+21A-16,L3,0,JS,aquatic,-1.8373
+21A-18,A3t,-40,T6,aquatic,-4.2583
+21A-18,A3t,-15,T6,aquatic,-3.1978
+21A-18,A3t,0,JS,aquatic,-2.7704
+21A-18,A3t,0,T6,aquatic,-2.64
+21A-19,L3,0,JS,aquatic,-2.6336
+21A-24,L3,0,T6,aquatic,-1.0418
+21A-26,A3t,-40,T6,aquatic,-5.3355
+21A-26,A3t,-15,T6,aquatic,-4.6287
+21A-26,A3t,0,T6,aquatic,-4.1106
+21A-27,L3,-40,T6,aquatic,-4.5255
+21A-27,L3,0,T6,aquatic,-3.0008
+21A-28,A4t,-40,T6,aquatic,-4.8267
+21A-28,A4t,-15,T6,aquatic,-4.2542
+21A-28,A4t,0,T6,aquatic,-3.3118
+21A-34,A3t,0,T6,aquatic,-3.1969
+21A-35,L3,0,T6,aquatic,-2.2926
+21A-37,A3t,0,T6,aquatic,-2.9585
+22-01,D1,-40,Pingo,dry tundra,-8.1569
+22-01,D1,-15,Pingo,dry tundra,-7.9804
+22-01,D1,0,Pingo,dry tundra,-7.4696
+22-02,D1,-40,Pingo,dry tundra,-7.6615
+22-02,D1,-15,Pingo,dry tundra,-7.7186
+22-02,D1,0,Pingo,dry tundra,-7.4123
+22-04,D2,-40,Pingo,dry tundra,-5.4507
+22-04,D2,-15,Pingo,dry tundra,-4.6931
+22-04,D2,0,Pingo,dry tundra,-4.3667
+22-05,D2,-40,Pingo,dry tundra,-6.874
+22-05,D2,-15,Pingo,dry tundra,-6.8201
+22-05,D2,0,Pingo,dry tundra,-6.1703
+22-08,A1,-40,Lakes,aquatic,-6.2564
+22-08,A1,-15,Lakes,aquatic,-5.7074
+22-08,A1,0,Lakes,aquatic,-4.838
+22-09,A1,-40,Lakes,aquatic,-5.9792
+22-09,A1,0,Lakes,aquatic,-4.1397
+22-11,A2,-40,Lakes,aquatic,-5.9412
+22-12,A2,-40,Lakes,aquatic,-5.9755
+22-12,A2,-15,Lakes,aquatic,-5.7887
+22-12,A2,0,Lakes,aquatic,-4.8037
+22-13,Dz,-40,Pingo,dry tundra,-8.0444
+22-13,Dz,-15,Pingo,dry tundra,-8.4051
+22-13,Dz,0,Pingo,dry tundra,-7.3877
+22-13,Dz,100,Pingo,dry tundra,-8.5816
+22-14,Dsn,-40,Pingo,dry tundra,-5.9475
+22-14,Dsn,-15,Pingo,dry tundra,-6.0561
+22-14,Dsn,0,Pingo,dry tundra,-5.2301
+22-15,Mz,-40,T8,moist tundra,-7.6765
+22-15,Mz,-15,T8,moist tundra,-7.0468
+22-15,Mz,0,T8,moist tundra,-7.9336
