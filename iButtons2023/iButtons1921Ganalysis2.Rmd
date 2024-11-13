@@ -1,0 +1,478 @@
+---
+title: "iButton Temperature Data from 2021-2023 NIRPO Plots in Prudhoe Bay, Alaska"
+author: "Jana Peirce"
+date: "6 November 2023"
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+```{r message = FALSE}
+library(dplyr)
+library(tidyr)
+library(readr)
+library(ggplot2)
+library(scales)
+library(here)
+library(stringr)
+library(tinytex)
+library(readxl)
+library(lubridate)
+library(hms)
+```
+
+## File prep
+
+- Save all data with datetime info in csv before bringing into r (do not use readxl package)
+- Format all times as yyyy-mm-dd before importing into r
+
+```{r}
+
+# Read the CSV file
+ibtn_temp2 <- read.csv("data/ibtn_data_1921G.csv")
+
+```
+
+```{r}
+
+# view output
+
+head(ibtn_temp2)
+
+```
+
+```{r}
+# transform data table from wide to long format
+
+temp_long2 <- ibtn_temp2 %>% 
+  pivot_longer(cols = c(-Date, -Time), names_to = "iBtn_ID", values_to = "temp_c") 
+
+# view output
+
+head(temp_long2)
+
+```
+
+```{r}
+# convert date col from char to date format (To work must start with date in YYYY-MM-DD in Excel file first)
+date_temp_long2X <- data.frame(temp_long2)
+  mutate(temp_long2, Date= as.Date(Date, format= "%Y-%m-%d"))
+
+```
+
+
+```{r}
+# remove leading X from iBtn_ID
+
+date_temp_long2 <- date_temp_long2X %>% 
+  mutate_at("iBtn_ID", str_replace, "X", "")
+
+knitr::kable(head(date_temp_long2[, 1:4]), "simple", col.names = c("Date","Time","iBtn ID","Temp (\u00B0C)"))
+```
+
+```{r}
+#read in plot type table
+
+plot_type2 <- read.csv("data/ibtn_summary.csv")
+```
+
+```{r}
+
+# view output
+head(plot_type2)
+
+```
+
+```{r}
+
+# join both tables together
+ibtn_summary2X <- left_join(date_temp_long2, plot_type2, by = c("iBtn_ID")) 
+
+# view output
+head(ibtn_summary2X)
+
+```
+
+```{r}
+# NOT SURE IF THIS IS NEEDED - convert date col AGAIN from char to date format
+ibtn_summary2 <- data.frame(ibtn_summary2X)
+  mutate(ibtn_summary2X, Date= as.Date(Date, format= "%Y-%m-%d"))
+
+# view output - Date column is still back to chr in short df, but shows as date in full data.frame
+head(ibtn_summary2)
+```
+```{r}
+write.csv(ibtn_summary2, "data/ibtn_summary2.csv")
+
+```
+
+```{r}
+#read in plot type table
+
+plot_var2 <- read.csv("data/plot_enviro_data.csv")
+
+```
+
+```{r}
+
+# view output
+head(plot_var2)
+
+```
+
+```{r}
+
+# join both tables together
+ibtn_summary2all <- left_join(ibtn_summary2, plot_var2, by = c("Plot_ID")) 
+
+# view output - why is date back to being a char field? Is it really? See tibble vs data frame?
+head(ibtn_summary2all)
+
+```
+```{r}
+write.csv(ibtn_summary2all, "data/ibtn_summary2all.csv")
+
+```
+
+### Average Daily Temperature calculated (4320 rows)
+
+```{r}
+# calculate average daily temp for each date by iButton
+
+avg_daily_temp2 <- ibtn_summary2all %>%
+  group_by(Date, iBtn_ID, Plot_ID, Veg_type, Depth, Transect.x, Moist_grad) %>% 
+  summarize(avg_daily_temp = mean(temp_c, na.rm = T), .groups = "drop") %>% 
+  mutate(across(where(is.numeric), ~ round(., 1)))
+
+knitr::kable(head(avg_daily_temp2[, 1:8]), "simple", col.names = c("Date","iBtn ID","Plot ID","Veg Type","Depth","Transect","Moisture","Avg Daily Temp (\u00B0C)"))
+```
+
+```{r}
+write.csv(avg_daily_temp2, "data/adt_ibtn2.csv")
+
+```
+
+
+```{r}
+# calculate avg daily temp for each date by depth for each veg type
+
+adt_depthXvegtype2 <- ibtn_summary2all %>% 
+  group_by(Date, Depth, Veg_type) %>% 
+  summarize(avg_daily_temp2 = mean(temp_c, na.rm = T), .groups = "drop") %>%
+  mutate(across(where(is.numeric), ~ round(., 4)))
+
+knitr::kable(head(adt_depthXvegtype2[, 1:4]), "simple", col.names = c("Date","Depth","Veg Type","Avg Daily Temp (\u00B0C)"))
+```
+
+
+```{r}
+write.csv(adt_depthXvegtype2, "data/adt_depthXvegtype2.csv")
+
+```
+
+
+```{r}
+# calculate mean for all days and times by iBtn
+
+mean_iBtn2 <- ibtn_summary2all %>% 
+  group_by(iBtn_ID, Plot_ID, Veg_type, Depth, Transect.x, Moist_grad) %>% 
+  summarize(avg_daily_temp2 = mean(temp_c, na.rm = T), .groups = "drop") %>% 
+  mutate(across(where(is.numeric), ~ round(., 4)))
+
+knitr::kable(head(mean_iBtn2[, 1:7]), "simple", col.names = c("iBtn ID","Plot ID","Veg Type","Depth","Transect","Moisture","Avg Daily Temp (\u00B0C)"))
+
+```
+
+```{r}
+write.csv(mean_iBtn2, "data/mean_iBtn2.csv")
+
+```
+
+```{r}
+# calculate mean for all days and times for each plot at each depth there is an iBtn
+
+mean_plotID2 <- ibtn_summary2all %>% 
+  group_by(Plot_ID, Veg_type, Depth, Transect.x, Moist_grad) %>%
+  summarize(avg_daily_temp2 = mean(temp_c, na.rm = T), .groups = "drop") %>% 
+  mutate(across(where(is.numeric), ~ round(., 4)))
+
+knitr::kable(head(mean_plotID2[, 1:6]), "simple", col.names = c("Plot ID","Depth","Veg Type","Transect","Moisture","Avg Daily Temp (\u00B0C)"))
+
+```
+
+```{r}
+write.csv(mean_plotID2, "data/mean_plotID2.csv")
+
+### STOPPED HERE FOR NOW - need to calculate for each plot at all depths and veg types - not grouped. Need to make a df for just surface (depth = 0) ibuttons.
+```
+
+```{r}
+# plot mean veg type - need to restrict to depth = 0
+
+p <- ggplot(mean_plotID2, aes(Veg_type, avg_daily_temp2)) +
+  geom_col(fill="salmon") +
+  labs(title = "Mean Temperature - All Days - by Veg type", x = "Veg Type", y = "Mean Temp (\u00B0C)") + theme(panel.background = element_blank(), plot.title = element_text(hjust = 0.5)) +
+  geom_text(aes(label = avg_daily_temp2), vjust = -0.5)
+
+p
+
+knitr::kable(head(mean_plotID2[, 1:2]), "simple", col.names = c("Veg Type", "Mean Temp (\u00B0C)"))
+
+p.mean_plot <- p
+```
+```{r}
+# calculate avg daily temp by ibtn position
+
+adt_location <- ibtn_summary %>% 
+  group_by(Date, Location) %>% 
+  summarize(avg_daily_temp = mean(temp_c, na.rm = T), .groups = "drop")
+```
+
+```{r}
+# calculate mean for all days by ibtn position
+
+mean_location <- ibtn_summary %>% 
+  group_by(Location) %>% 
+  summarize(avg_daily_temp = mean(temp_c, na.rm = T), .groups = "drop") %>% 
+  mutate(across(where(is.numeric), ~ round(., 1)))
+```
+
+```{r}
+# plot mean for all ibtns by position
+
+p <- ggplot(mean_location, aes(Location, avg_daily_temp)) +
+  geom_col(fill="salmon") +
+  labs(title = "Mean Temperature - All Days - by iBtn Position", x = "iBtn Position", y = "Mean Temp (\u00B0C)") + theme(panel.background = element_blank(), plot.title = element_text(hjust = 0.5)) +
+  geom_text(aes(label = avg_daily_temp), vjust = -0.5)
+
+p
+
+knitr::kable(head(mean_veg_type[, 1:2]), "simple", col.names = c("iBtn Position", "Mean Temp (\u00B0C)"))
+
+p.mean_sensor <- p
+```
+
+```{r}
+# subset to remove sensors not assoc with plots
+# then calculate average daily temp for each day by plot type
+
+ibtn_summary_geol <- subset(ibtn_summary, Surf_geol!="N/A")
+
+adt_surf_geol <- ibtn_summary_geol %>% 
+  group_by(Date, Surf_geol) %>% 
+  summarize(avg_daily_temp = mean(temp_c, na.rm = T), .groups = "drop")
+```
+
+```{r}
+# calculate mean for all days by plot type
+
+mean_surf_geol <- ibtn_summary_geol %>% 
+  group_by(Surf_geol) %>% 
+  summarize(avg_daily_temp = mean(temp_c, na.rm = T), .groups = "drop") %>% mutate(across(where(is.numeric), ~ round(., 1)))
+```
+
+```{r}
+# plot mean plot type for season
+
+p <- ggplot(mean_surf_geol, aes(Surf_geol, avg_daily_temp)) +
+  geom_col(fill="darkolivegreen3") +
+  labs(title = "Mean Temperature by Surficial Geology", x = "Surf geol", y = "Mean Temp (\u00B0C)") + theme(panel.background = element_blank(), plot.title = element_text(hjust = 0.5)) +
+  geom_text(aes(label = avg_daily_temp), vjust = -0.5)
+
+p
+
+knitr::kable(head(mean_surf_geol[, 1:2]), "simple", col.names = c("Surficial Geology", "Mean Temp (\u00B0C)"))
+
+p.mean_plot <- p
+```
+
+
+```{r}
+# calculate mean for all days by veg type and surficial geology
+
+mean_veg_geol <- ibtn_summary_geol %>% 
+  group_by(Veg_type, Surf_geol) %>% 
+  summarize(avg_daily_temp = mean(temp_c, na.rm = T), .groups = "drop") %>% 
+  mutate(across(where(is.numeric), ~ round(., 1)))
+
+p <- ggplot(mean_veg_geol, aes(x = Veg_type, y = avg_daily_temp, fill = Surf_geol)) +
+  geom_col(position = "dodge2") +
+  labs(title = "Mean Temperature by Veg Type and Surface Geology", x = NULL, y = "Mean Temp (\u00B0C)") + theme(panel.background = element_blank(), plot.title = element_text(hjust = 0.5), legend.title = element_blank()) 
+
+p
+
+knitr::kable(mean_veg_geol[, 1:3], "simple", col.names = c("Veg Type","Surf Geol","Mean Temp (\u00B0C)"))
+
+p.mean_veg_geol <- p
+```
+```{r}
+# calculate mean for all days by veg type and iBtn position
+
+mean_veg_loc <- ibtn_summary %>% 
+  group_by(Veg_type, Location) %>% 
+  summarize(avg_daily_temp = mean(temp_c, na.rm = T), .groups = "drop") %>% 
+  mutate(across(where(is.numeric), ~ round(., 1)))
+
+p <- ggplot(mean_veg_loc, aes(x = Veg_type, y = avg_daily_temp, fill = Location)) +
+  geom_col(position = "dodge2") +
+  labs(title = "Mean Temperature by Veg Type and iBtn Position", x = NULL, y = "Mean Temp (\u00B0C)") + theme(panel.background = element_blank(), plot.title = element_text(hjust = 0.5), legend.title = element_blank()) 
+
+p
+
+knitr::kable(mean_veg_geol[, 1:3], "simple", col.names = c("Veg Type","iBtn Position","Mean Temp (\u00B0C)"))
+
+p.mean_veg_loc <- p
+```
+
+```{r}
+#plot adt all ibuttons
+
+p <- ggplot(avg_daily_temp, aes(x = Date, y = avg_daily_temp)) +
+  geom_point(alpha = 0.3, color = "dodgerblue2") +
+  labs(title = "Average Daily Temperature", x = NULL, y = "Temperature (\u00B0C)") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+p
+
+p.adt_all_ibtn <- p
+```
+
+### Let's look at the data in more detail. 
+
+Here is a plot of the average daily temperature of each iButton from all vegetation types at soil surface and the base of the organic layer.
+
+```{r}
+# plot by iBtn location
+
+p <- ggplot(avg_daily_temp, aes(x = Date, y = avg_daily_temp, color=Location)) +
+  geom_point(alpha = 0.3) +
+  labs(title = "Average Daily Temperature by iBtn Position", x = NULL, y = "Temperature (\u00B0C)", color = "iButton Position")  +
+  theme(plot.title = element_text(hjust = 0.5))
+
+p
+
+p.adt_ibtn_loc <-  p
+```
+Now we can look at the just the surface data colored to indicated the vegetation type of the plot.
+
+```{r}
+# subset to remove sensors at the base of the organic layer
+
+adt_veg_surface <- subset(avg_daily_temp, Location!="base org layer")
+```
+
+```{r}
+# plot by Veg type at soil surface
+
+p <- ggplot(adt_veg_surface, aes(x = Date, y = avg_daily_temp, color=Veg_type)) +
+  geom_point(alpha = 0.5) +
+  labs(title = "Average Daily Temperature at Soil Surface by Veg Type", x = NULL, y = "Temperature (\u00B0C)", color = "Location")  +
+  theme(plot.title = element_text(hjust = 0.5))
+
+p
+
+p.adt_veg_surface <- p
+
+```
+```{r}
+# plot by Transect
+
+p <- ggplot(adt_veg_surface, aes(x = Date, y = avg_daily_temp, color=Transect.x)) +
+  geom_point(alpha = 0.3) +
+  labs(title = "Average Daily Temperature by Transect at Soil Surface", x = NULL, y = "Temperature (\u00B0C)", color = "Transect")  +
+  theme(plot.title = element_text(hjust = 0.5))
+
+p
+
+p.adt_trans_surface <-  p
+```
+Now we can look at the just the base of the organic layer data colored to indicated the vegetation type of the plot.
+
+```{r}
+# subset to remove sensors at the soil surface
+
+adt_veg_base <- subset(avg_daily_temp, Location!="surface")
+```
+
+```{r}
+# plot by Veg type at base of org layer
+
+p <- ggplot(adt_veg_base, aes(x = Date, y = avg_daily_temp, color=Veg_type)) +
+  geom_point(alpha = 0.5) +
+  labs(title = "Average Daily Temperature at Base of Organic Layer by Veg Type", x = NULL, y = "Temperature (\u00B0C)", color = "Location")  +
+  theme(plot.title = element_text(hjust = 0.5))
+
+p
+
+p.adt_veg_base <- p
+
+```
+
+Here is a plot of the average daily temperature of each iButton by site moisture
+
+```{r}
+# plot by moisture gradient
+
+p <- ggplot(adt_veg_surface, aes(x = Date, y = avg_daily_temp, color=Moist_grad)) +
+  geom_point(alpha = 0.3) +
+  labs(title = "Average Daily Temperature at Soil Surface by Site Moisture", x = NULL, y = "Temperature (\u00B0C)", color = "Site Moisture")  +
+  theme(plot.title = element_text(hjust = 0.5))
+
+p
+
+p.adt_surf_moisture <-  p
+```
+
+```{r}
+# plot by moisture gradient
+
+p <- ggplot(adt_veg_base, aes(x = Date, y = avg_daily_temp, color=Moist_grad)) +
+  geom_point(alpha = 0.3) +
+  labs(title = "Average Daily Temperature at Base of the Organic Layer by Site Moisture", x = NULL, y = "Temperature (\u00B0C)", color = "Site Moisture")  +
+  theme(plot.title = element_text(hjust = 0.5))
+
+p
+
+p.adt_base_moisture <-  p
+```
+
+```{r}
+# Facet plot by veg type
+
+p <- ggplot(adt_veg_surface, aes(x = Date, y = avg_daily_temp)) +
+  geom_point(alpha=0.2, color = "firebrick") +
+  facet_wrap(~Veg_type, ncol=2) +
+  labs(title = "Average Daily Temperature by Veg type", x = NULL, y = "Temp (\u00B0C)")  +
+  theme(plot.title = element_text(hjust = 0.5))
+
+p
+
+p.adt_veg_facet <- p
+```
+```{r}
+# filter out some plots for smaller facet set
+
+transect_filter <- avg_daily_temp %>% 
+    filter(Transect.x == "T6", Location == "surface")
+```
+
+```{r}
+# Facet plots by select plots
+
+p <- ggplot(transect_filter, aes(x = Date, y = avg_daily_temp)) +
+  geom_point(alpha = 0.3, color = "hotpink2") +
+  facet_wrap(~Plot_ID, ncol = 4) + 
+  labs(title = "Avg. Daily Temp at Soil Surface in T6 Plots", x = NULL, y = "Temperature (\u00B0C)") +
+  theme(plot.title = element_text(hjust = 0.5), axis.text.x = element_text(angle=45, hjust = 1))
+
+p
+
+p.t6_surface_facet <- p
+
+```
+
+### That's it! (for now)
